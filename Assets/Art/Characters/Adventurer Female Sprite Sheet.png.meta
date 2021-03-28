@@ -1,0 +1,1484 @@
+fileFormatVersion: 2
+guid: 9a57568615fdf7c4c8908e795119d87e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1440518041077064095
+    second: Adventurer Female Sprite Sheet_0
+  - first:
+      213: 1927154432546424787
+    second: Adventurer Female Sprite Sheet_1
+  - first:
+      213: -3362215572200808990
+    second: Adventurer Female Sprite Sheet_2
+  - first:
+      213: 7979074200822808942
+    second: Adventurer Female Sprite Sheet_3
+  - first:
+      213: 3662680490533180769
+    second: Adventurer Female Sprite Sheet_4
+  - first:
+      213: 4620608302205990325
+    second: Adventurer Female Sprite Sheet_5
+  - first:
+      213: -8187454204970945972
+    second: Adventurer Female Sprite Sheet_6
+  - first:
+      213: -2464464415109538524
+    second: Adventurer Female Sprite Sheet_7
+  - first:
+      213: 882556300075621838
+    second: Adventurer Female Sprite Sheet_8
+  - first:
+      213: 8104460964076836889
+    second: Adventurer Female Sprite Sheet_9
+  - first:
+      213: -39052010764808234
+    second: Adventurer Female Sprite Sheet_10
+  - first:
+      213: -561519679613458101
+    second: Adventurer Female Sprite Sheet_11
+  - first:
+      213: -7990961109601412096
+    second: Adventurer Female Sprite Sheet_12
+  - first:
+      213: 1484541506824012365
+    second: Adventurer Female Sprite Sheet_13
+  - first:
+      213: -1840752998641234693
+    second: Adventurer Female Sprite Sheet_14
+  - first:
+      213: -3908634467906884950
+    second: Adventurer Female Sprite Sheet_15
+  - first:
+      213: 1187294556592463341
+    second: Adventurer Female Sprite Sheet_16
+  - first:
+      213: -2482379645055944973
+    second: Adventurer Female Sprite Sheet_17
+  - first:
+      213: -7727607939976299240
+    second: Adventurer Female Sprite Sheet_18
+  - first:
+      213: -6299965203621965811
+    second: Adventurer Female Sprite Sheet_19
+  - first:
+      213: 642458823119470675
+    second: Adventurer Female Sprite Sheet_20
+  - first:
+      213: 2712194743655051407
+    second: Adventurer Female Sprite Sheet_21
+  - first:
+      213: -5337560667758865784
+    second: Adventurer Female Sprite Sheet_22
+  - first:
+      213: -7741771495787175378
+    second: Adventurer Female Sprite Sheet_23
+  - first:
+      213: -2927161851363396854
+    second: Adventurer Female Sprite Sheet_24
+  - first:
+      213: 1401840931244149564
+    second: Adventurer Female Sprite Sheet_25
+  - first:
+      213: 5726214664535781439
+    second: Adventurer Female Sprite Sheet_26
+  - first:
+      213: -6833262853496069922
+    second: Adventurer Female Sprite Sheet_27
+  - first:
+      213: 8396592794972293529
+    second: Adventurer Female Sprite Sheet_28
+  - first:
+      213: 1569879187802173327
+    second: Adventurer Female Sprite Sheet_29
+  - first:
+      213: 489557071490105177
+    second: Adventurer Female Sprite Sheet_30
+  - first:
+      213: 1112904660496486075
+    second: Adventurer Female Sprite Sheet_31
+  - first:
+      213: 7260229939732723003
+    second: Adventurer Female Sprite Sheet_32
+  - first:
+      213: 8632853111620347770
+    second: Adventurer Female Sprite Sheet_33
+  - first:
+      213: 4071636238654133930
+    second: Adventurer Female Sprite Sheet_34
+  - first:
+      213: 7147890255029268589
+    second: Adventurer Female Sprite Sheet_35
+  - first:
+      213: -7350996858177521694
+    second: Adventurer Female Sprite Sheet_36
+  - first:
+      213: -3829765999028038619
+    second: Adventurer Female Sprite Sheet_37
+  - first:
+      213: 2778032627295402909
+    second: Adventurer Female Sprite Sheet_38
+  - first:
+      213: -4226212269267474665
+    second: Adventurer Female Sprite Sheet_39
+  - first:
+      213: 2693751403432088350
+    second: Adventurer Female Sprite Sheet_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 190, z: 264, w: 6}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 193
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e5f0d4970420ce0800000000000000
+      internalID: -1440518041077064095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 193
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7cf33feb0aeba10800000000000000
+      internalID: 1927154432546424787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 193
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed1fa830c20751d0800000000000000
+      internalID: -3362215572200808990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 193
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e610780f5bd5bbe60800000000000000
+      internalID: 7979074200822808942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 193
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165dbfb108474d230800000000000000
+      internalID: 3662680490533180769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 193
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5753315c2bf1040800000000000000
+      internalID: 4620608302205990325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 163
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42bde197c1506e80800000000000000
+      internalID: -8187454204970945972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 165
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d1ec7fba67ccdd0800000000000000
+      internalID: -2464464415109538524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 163
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd5a4867487f3c00800000000000000
+      internalID: 882556300075621838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 161
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918d1dbbe44d87070800000000000000
+      internalID: 8104460964076836889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 163
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df49923762457ff0800000000000000
+      internalID: -39052010764808234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 164
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49af3293d41538f0800000000000000
+      internalID: -561519679613458101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 163
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c1f3075376a1190800000000000000
+      internalID: -7990961109601412096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 161
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42819092a62a9410800000000000000
+      internalID: 1484541506824012365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 128
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc01c486e45476e0800000000000000
+      internalID: -1840752998641234693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 97
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaaef8709adb1c9c0800000000000000
+      internalID: -3908634467906884950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 97
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedd271db1e1a7010800000000000000
+      internalID: 1187294556592463341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 97
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6b7c27dd0dc8dd0800000000000000
+      internalID: -2482379645055944973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 97
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d793e658502c490800000000000000
+      internalID: -7727607939976299240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 65
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d009ac4a6070298a0800000000000000
+      internalID: -6299965203621965811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 65
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3500ade45e87ae800800000000000000
+      internalID: 642458823119470675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80bd31efb6a3a520800000000000000
+      internalID: 2712194743655051407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 65
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882d22f2adc2de5b0800000000000000
+      internalID: -5337560667758865784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 65
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e226c5d97d3bf8490800000000000000
+      internalID: -7741771495787175378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 65
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03f8611ec1a067d0800000000000000
+      internalID: -2927161851363396854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 65
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b096256e6547310800000000000000
+      internalID: 1401840931244149564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 33
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30b94b06e9977f40800000000000000
+      internalID: 5726214664535781439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 32
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0ae7093af5b21a0800000000000000
+      internalID: -6833262853496069922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 32
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9998de3f8a0b68470800000000000000
+      internalID: 8396592794972293529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 32
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f2a31cdc459c510800000000000000
+      internalID: 1569879187802173327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 32
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fb27f00914bc600800000000000000
+      internalID: 489557071490105177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 32
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe05cd64e4d17f00800000000000000
+      internalID: 1112904660496486075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 32
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35bc61f9a481c460800000000000000
+      internalID: 7260229939732723003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 32
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77a14c8a2e0ec770800000000000000
+      internalID: 8632853111620347770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 32
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6569b269b518830800000000000000
+      internalID: 4071636238654133930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60fe78d058623360800000000000000
+      internalID: 7147890255029268589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7f0530e430cf990800000000000000
+      internalID: -7350996858177521694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52490176d10f9dac0800000000000000
+      internalID: -3829765999028038619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b3364b4fd8d8620800000000000000
+      internalID: 2778032627295402909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7172ae0255a7955c0800000000000000
+      internalID: -4226212269267474665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adventurer Female Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1397ca11a0226520800000000000000
+      internalID: 2693751403432088350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -127, y: -90}
+      - {x: -134, y: -90}
+      - {x: -142, y: -100}
+      - {x: -142, y: -107}
+      - {x: -140, y: -112}
+      - {x: -123, y: -112}
+      - {x: -122, y: -111}
+      - {x: -122, y: -93}
+    - - {x: -102, y: -90}
+      - {x: -107, y: -91}
+      - {x: -109, y: -96}
+      - {x: -109, y: -107}
+      - {x: -106, y: -112}
+      - {x: -92, y: -112}
+      - {x: -90, y: -111}
+      - {x: -90, y: -93}
+      - {x: -92, y: -90}
+    - - {x: -57, y: -90}
+      - {x: -73, y: -90}
+      - {x: -75, y: -91}
+      - {x: -76, y: -95}
+      - {x: -76, y: -112}
+      - {x: -54, y: -112}
+      - {x: -46, y: -107}
+      - {x: -46, y: -99}
+      - {x: -48, y: -97}
+    - - {x: -44, y: -101}
+      - {x: -44, y: -112}
+      - {x: -21, y: -112}
+      - {x: -14, y: -110}
+      - {x: -14, y: -101}
+      - {x: -16, y: -97}
+      - {x: -26, y: -90}
+      - {x: -37, y: -90}
+      - {x: -42, y: -92}
+    - - {x: -6, y: -90}
+      - {x: -12, y: -98}
+      - {x: -12, y: -112}
+      - {x: 9, y: -112}
+      - {x: 18, y: -109}
+      - {x: 18, y: -98}
+      - {x: 7, y: -90}
+    - - {x: 50, y: -99}
+      - {x: 34, y: -90}
+      - {x: 26, y: -90}
+      - {x: 20, y: -99}
+      - {x: 20, y: -112}
+      - {x: 39, y: -112}
+      - {x: 48, y: -107}
+      - {x: 50, y: -103}
+    - - {x: -89, y: -58}
+      - {x: -104, y: -58}
+      - {x: -111, y: -67}
+      - {x: -111, y: -79}
+      - {x: -110, y: -81}
+      - {x: -105, y: -82}
+      - {x: -89, y: -82}
+      - {x: -83, y: -71}
+      - {x: -83, y: -64}
+      - {x: -84, y: -60}
+    - - {x: -64, y: -58}
+      - {x: -73, y: -58}
+      - {x: -79, y: -67}
+      - {x: -79, y: -78}
+      - {x: -78, y: -81}
+      - {x: -74, y: -82}
+      - {x: -60, y: -82}
+      - {x: -54, y: -73}
+      - {x: -54, y: -62}
+      - {x: -56, y: -60}
+    - - {x: -29, y: -58}
+      - {x: -40, y: -58}
+      - {x: -47, y: -67}
+      - {x: -47, y: -76}
+      - {x: -45, y: -80}
+      - {x: -42, y: -82}
+      - {x: -34, y: -82}
+      - {x: -28, y: -79}
+      - {x: -27, y: -77}
+      - {x: -27, y: -62}
+    - - {x: -11, y: -58}
+      - {x: -15, y: -60}
+      - {x: -15, y: -82}
+      - {x: 4, y: -82}
+      - {x: 5, y: -80}
+      - {x: 5, y: -59}
+      - {x: 4, y: -58}
+    - - {x: 23, y: -58}
+      - {x: 18, y: -59}
+      - {x: 18, y: -82}
+      - {x: 29, y: -82}
+      - {x: 37, y: -79}
+      - {x: 37, y: -62}
+      - {x: 32, y: -58}
+    - - {x: 55, y: -58}
+      - {x: 51, y: -64}
+      - {x: 51, y: -77}
+      - {x: 55, y: -82}
+      - {x: 67, y: -82}
+      - {x: 78, y: -70}
+      - {x: 78, y: -63}
+      - {x: 72, y: -58}
+    - - {x: 90, y: -58}
+      - {x: 84, y: -60}
+      - {x: 83, y: -62}
+      - {x: 83, y: -76}
+      - {x: 88, y: -82}
+      - {x: 100, y: -82}
+      - {x: 104, y: -75}
+      - {x: 104, y: -68}
+      - {x: 98, y: -58}
+    - - {x: 119, y: -58}
+      - {x: 116, y: -59}
+      - {x: 115, y: -62}
+      - {x: 115, y: -75}
+      - {x: 120, y: -82}
+      - {x: 131, y: -82}
+      - {x: 134, y: -79}
+      - {x: 134, y: -66}
+      - {x: 131, y: -58}
+    - - {x: -136, y: -57}
+      - {x: -142, y: -66}
+      - {x: -142, y: -74}
+      - {x: -139, y: -81}
+      - {x: -123, y: -81}
+      - {x: -113, y: -65}
+      - {x: -113, y: -59}
+      - {x: -114, y: -57}
+    - - {x: -138, y: -25}
+      - {x: -141, y: -32}
+      - {x: -141, y: -42}
+      - {x: -136, y: -49}
+      - {x: -127, y: -49}
+      - {x: -121, y: -45}
+      - {x: -121, y: -27}
+      - {x: -126, y: -25}
+    - - {x: -92, y: -26}
+      - {x: -110, y: -26}
+      - {x: -111, y: -29}
+      - {x: -111, y: -41}
+      - {x: -102, y: -49}
+      - {x: -93, y: -49}
+      - {x: -87, y: -42}
+      - {x: -87, y: -37}
+      - {x: -89, y: -31}
+    - - {x: -64, y: -27}
+      - {x: -73, y: -27}
+      - {x: -79, y: -37}
+      - {x: -79, y: -41}
+      - {x: -73, y: -49}
+      - {x: -59, y: -49}
+      - {x: -55, y: -44}
+      - {x: -55, y: -35}
+      - {x: -57, y: -30}
+    - - {x: -39, y: -31}
+      - {x: -47, y: -41}
+      - {x: -47, y: -42}
+      - {x: -40, y: -49}
+      - {x: -28, y: -49}
+      - {x: -23, y: -44}
+      - {x: -23, y: -33}
+      - {x: -30, y: -31}
+    - - {x: -10, y: -35}
+      - {x: -13, y: -42}
+      - {x: -13, y: -47}
+      - {x: -9, y: -49}
+      - {x: 9, y: -49}
+      - {x: 12, y: -47}
+      - {x: 12, y: -36}
+      - {x: 9, y: -35}
+    - - {x: 27, y: -34}
+      - {x: 19, y: -41}
+      - {x: 19, y: -45}
+      - {x: 22, y: -49}
+      - {x: 41, y: -49}
+      - {x: 44, y: -47}
+      - {x: 44, y: -37}
+      - {x: 37, y: -34}
+    - - {x: 54, y: -35}
+      - {x: 51, y: -42}
+      - {x: 51, y: -47}
+      - {x: 55, y: -49}
+      - {x: 73, y: -49}
+      - {x: 76, y: -47}
+      - {x: 76, y: -36}
+      - {x: 73, y: -35}
+    - - {x: -56, y: -34}
+      - {x: -53, y: -33}
+      - {x: -53, y: -30}
+      - {x: -56, y: -29}
+      - {x: -58, y: -31}
+    - - {x: -80, y: -32}
+      - {x: -77, y: -31}
+      - {x: -77, y: -28}
+      - {x: -80, y: -27}
+      - {x: -82, y: -29}
+    - - {x: -60, y: -29}
+      - {x: -57, y: -28}
+      - {x: -57, y: -25}
+      - {x: -60, y: -24}
+      - {x: -62, y: -26}
+    - - {x: -75, y: -28}
+      - {x: -72, y: -27}
+      - {x: -72, y: -24}
+      - {x: -75, y: -23}
+      - {x: -77, y: -25}
+    - - {x: -138, y: 7}
+      - {x: -141, y: 0}
+      - {x: -141, y: -10}
+      - {x: -136, y: -17}
+      - {x: -127, y: -17}
+      - {x: -121, y: -13}
+      - {x: -121, y: 5}
+      - {x: -126, y: 7}
+    - - {x: -92, y: 6}
+      - {x: -110, y: 6}
+      - {x: -111, y: 3}
+      - {x: -111, y: -9}
+      - {x: -102, y: -17}
+      - {x: -93, y: -17}
+      - {x: -87, y: -10}
+      - {x: -87, y: -5}
+      - {x: -89, y: 1}
+    - - {x: -64, y: 5}
+      - {x: -73, y: 5}
+      - {x: -79, y: -5}
+      - {x: -79, y: -9}
+      - {x: -73, y: -17}
+      - {x: -59, y: -17}
+      - {x: -55, y: -12}
+      - {x: -55, y: -3}
+      - {x: -57, y: 2}
+    - - {x: -32, y: 6}
+      - {x: -42, y: 6}
+      - {x: -47, y: -3}
+      - {x: -47, y: -8}
+      - {x: -39, y: -17}
+      - {x: -29, y: -17}
+      - {x: -23, y: -11}
+      - {x: -23, y: -2}
+      - {x: -25, y: 3}
+    - - {x: -56, y: -2}
+      - {x: -53, y: -1}
+      - {x: -53, y: 2}
+      - {x: -56, y: 3}
+      - {x: -58, y: 1}
+    - - {x: -80, y: 0}
+      - {x: -77, y: 1}
+      - {x: -77, y: 4}
+      - {x: -80, y: 5}
+      - {x: -82, y: 3}
+    - - {x: -60, y: 3}
+      - {x: -57, y: 4}
+      - {x: -57, y: 7}
+      - {x: -60, y: 8}
+      - {x: -62, y: 6}
+    - - {x: -75, y: 4}
+      - {x: -72, y: 5}
+      - {x: -72, y: 8}
+      - {x: -75, y: 9}
+      - {x: -77, y: 7}
+    - - {x: -136, y: 36}
+      - {x: -140, y: 28}
+      - {x: -140, y: 17}
+      - {x: -136, y: 14}
+      - {x: -119, y: 14}
+      - {x: -119, y: 28}
+      - {x: -124, y: 36}
+    - - {x: -40, y: 71}
+      - {x: -44, y: 69}
+      - {x: -44, y: 52}
+      - {x: -38, y: 47}
+      - {x: -29, y: 47}
+      - {x: -26, y: 51}
+      - {x: -26, y: 66}
+      - {x: -28, y: 71}
+    - - {x: 86, y: 71}
+      - {x: 84, y: 65}
+      - {x: 84, y: 50}
+      - {x: 89, y: 47}
+      - {x: 100, y: 47}
+      - {x: 102, y: 50}
+      - {x: 102, y: 65}
+      - {x: 98, y: 71}
+    - - {x: -138, y: 72}
+      - {x: -142, y: 61}
+      - {x: -142, y: 53}
+      - {x: -135, y: 49}
+      - {x: -125, y: 49}
+      - {x: -120, y: 53}
+      - {x: -120, y: 70}
+      - {x: -126, y: 72}
+    - - {x: -72, y: 72}
+      - {x: -76, y: 70}
+      - {x: -78, y: 58}
+      - {x: -78, y: 56}
+      - {x: -71, y: 49}
+      - {x: -61, y: 49}
+      - {x: -56, y: 52}
+      - {x: -56, y: 64}
+      - {x: -60, y: 72}
+    - - {x: 3, y: 73}
+      - {x: -7, y: 73}
+      - {x: -12, y: 67}
+      - {x: -12, y: 55}
+      - {x: -5, y: 49}
+      - {x: 0, y: 50}
+      - {x: 3, y: 53}
+      - {x: 5, y: 56}
+      - {x: 5, y: 69}
+    - - {x: 57, y: 73}
+      - {x: 53, y: 68}
+      - {x: 53, y: 55}
+      - {x: 57, y: 49}
+      - {x: 62, y: 49}
+      - {x: 69, y: 52}
+      - {x: 69, y: 69}
+      - {x: 67, y: 73}
+    - - {x: 26, y: 74}
+      - {x: 21, y: 73}
+      - {x: 21, y: 54}
+      - {x: 25, y: 50}
+      - {x: 31, y: 50}
+      - {x: 37, y: 54}
+      - {x: 37, y: 69}
+      - {x: 34, y: 74}
+    - - {x: -96, y: 73}
+      - {x: -105, y: 73}
+      - {x: -108, y: 68}
+      - {x: -110, y: 60}
+      - {x: -110, y: 57}
+      - {x: -104, y: 51}
+      - {x: -92, y: 51}
+      - {x: -88, y: 56}
+      - {x: -88, y: 70}
+    - - {x: -125, y: 103}
+      - {x: -135, y: 103}
+      - {x: -140, y: 101}
+      - {x: -141, y: 99}
+      - {x: -141, y: 86}
+      - {x: -136, y: 79}
+      - {x: -127, y: 79}
+      - {x: -121, y: 83}
+      - {x: -121, y: 92}
+      - {x: -122, y: 99}
+    - - {x: -103, y: 104}
+      - {x: -108, y: 102}
+      - {x: -110, y: 98}
+      - {x: -110, y: 83}
+      - {x: -102, y: 79}
+      - {x: -90, y: 79}
+      - {x: -87, y: 83}
+      - {x: -87, y: 91}
+      - {x: -93, y: 104}
+    - - {x: -71, y: 104}
+      - {x: -76, y: 102}
+      - {x: -78, y: 97}
+      - {x: -78, y: 87}
+      - {x: -75, y: 80}
+      - {x: -70, y: 79}
+      - {x: -60, y: 79}
+      - {x: -55, y: 85}
+      - {x: -55, y: 91}
+      - {x: -61, y: 104}
+    - - {x: -39, y: 104}
+      - {x: -44, y: 102}
+      - {x: -46, y: 97}
+      - {x: -46, y: 87}
+      - {x: -43, y: 80}
+      - {x: -38, y: 79}
+      - {x: -28, y: 79}
+      - {x: -23, y: 85}
+      - {x: -23, y: 91}
+      - {x: -29, y: 104}
+    - - {x: -10, y: 104}
+      - {x: -14, y: 96}
+      - {x: -14, y: 87}
+      - {x: -7, y: 79}
+      - {x: 3, y: 79}
+      - {x: 9, y: 83}
+      - {x: 9, y: 92}
+      - {x: 2, y: 104}
+    - - {x: 32, y: 102}
+      - {x: 25, y: 102}
+      - {x: 20, y: 96}
+      - {x: 19, y: 88}
+      - {x: 19, y: 85}
+      - {x: 26, y: 79}
+      - {x: 33, y: 79}
+      - {x: 39, y: 82}
+      - {x: 39, y: 91}
+      - {x: 38, y: 98}
+    physicsShape:
+    - - {x: -109, y: 43}
+      - {x: -110, y: 77}
+      - {x: -82, y: 72}
+      - {x: -86, y: 42}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
