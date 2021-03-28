@@ -5,15 +5,15 @@ using UnityEngine;
 public class MainCharacterController : MonoBehaviour
 {
 
-    public float speed;
+    public float speed = 5;
     private Vector2 moveInput;
 
-    public Rigidbody2D rigidBody;
+    private Rigidbody2D rigidBody;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5;
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -22,9 +22,20 @@ public class MainCharacterController : MonoBehaviour
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
+    }
 
-        // transform.position += new Vector3(moveInput.x * Time.deltaTime * speed, moveInput.y * Time.deltaTime * speed, 0f);
+    private void FixedUpdate()
+    {
+        rigidBody.MovePosition(rigidBody.position + CalculateMovement(moveInput, speed, Time.deltaTime));
+    }
 
-        rigidBody.velocity = moveInput * speed;
+    public Vector2 CalculateMovement(Vector2 coords, float speed, float time)
+    {
+        return new Vector2(coords.x * speed * time, coords.y * speed * time);
+    }
+
+    public int ExampleFunction(int a, int b)
+    {
+        return a + b;
     }
 }
