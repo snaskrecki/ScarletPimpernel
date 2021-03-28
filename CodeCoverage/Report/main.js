@@ -224,21 +224,16 @@ var assemblies = [
   {
     "name": "AllScripts",
     "classes": [
-      { "name": "MainCharacterController", "rp": "AllScripts_MainCharacterController.html", "cl": 7, "ucl": 11, "cal": 18, "tl": 41, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [38.8], "bch": [], "hc": [{ "et": "28.03.2021 - 11:30:31", "cl": 7, "ucl": 11, "cal": 18, "tl": 41, "lcq": 38.8, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "28.03.2021 - 11:33:47", "cl": 7, "ucl": 11, "cal": 18, "tl": 41, "lcq": 38.8, "cb": 0, "tb": 0, "bcq": 0 }] },
-    ]},
-  {
-    "name": "PlayTests",
-    "classes": [
-      { "name": "Tests.PlayModeExampleTest", "rp": "PlayTests_PlayModeExampleTest.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 28, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0,100], "bch": [], "hc": [{ "et": "28.03.2021 - 11:30:31", "cl": 0, "ucl": 5, "cal": 5, "tl": 28, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "28.03.2021 - 11:33:47", "cl": 5, "ucl": 0, "cal": 5, "tl": 28, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "MainCharacterController", "rp": "AllScripts_MainCharacterController.html", "cl": 4, "ucl": 11, "cal": 15, "tl": 37, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [26.6], "bch": [], "hc": [{ "et": "28.03.2021 - 20:38:56", "cl": 4, "ucl": 11, "cal": 15, "tl": 37, "lcq": 26.6, "cb": 0, "tb": 0, "bcq": 0 }] },
     ]},
   {
     "name": "TestEdit",
     "classes": [
-      { "name": "Tests.ExampleTest", "rp": "TestEdit_ExampleTest.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 40, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "28.03.2021 - 11:30:31", "cl": 13, "ucl": 0, "cal": 13, "tl": 40, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "28.03.2021 - 11:33:47", "cl": 13, "ucl": 0, "cal": 13, "tl": 40, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Tests.ExampleTest", "rp": "TestEdit_ExampleTest.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 29, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "28.03.2021 - 20:38:56", "cl": 7, "ucl": 0, "cal": 7, "tl": 29, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
     ]},
 ];
 
-var historicCoverageExecutionTimes = ["28.03.2021 - 11:30:31"];
+var historicCoverageExecutionTimes = [];
 
 var riskHotspotMetrics = [
 ];

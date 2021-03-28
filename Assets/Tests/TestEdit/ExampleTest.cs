@@ -8,17 +8,6 @@ namespace Tests
 {
     public class ExampleTest
     {
-        // A Test behaves as an ordinary method
-        [Test]
-        public void ExampeSum()
-        {
-            // Use the Assert class to test conditions
-            var gameObject = new GameObject();
-            var character = gameObject.AddComponent<MainCharacterController>();
-            Assert.AreEqual(4, character.ExampleFunction(2, 2));
-            Assert.AreEqual(6, character.ExampleFunction(2, 4));
-        }
-
         [Test]
 
         public void MovementTest()

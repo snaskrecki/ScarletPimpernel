@@ -34,8 +34,4 @@ public class MainCharacterController : MonoBehaviour
         return new Vector2(coords.x * speed * time, coords.y * speed * time);
     }
 
-    public int ExampleFunction(int a, int b)
-    {
-        return a + b;
-    }
 }

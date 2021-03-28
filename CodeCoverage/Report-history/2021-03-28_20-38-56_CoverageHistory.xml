@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2021-03-28_20-38-56" tag="">
+  <assembly name="AllScripts">
+    <class name="MainCharacterController" coveredlines="4" coverablelines="15" totallines="37" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="TestEdit">
+    <class name="Tests.ExampleTest" coveredlines="7" coverablelines="7" totallines="29" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>
