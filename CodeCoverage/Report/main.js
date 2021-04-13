@@ -224,16 +224,22 @@ var assemblies = [
   {
     "name": "AllScripts",
     "classes": [
-      { "name": "MainCharacterController", "rp": "AllScripts_MainCharacterController.html", "cl": 4, "ucl": 11, "cal": 15, "tl": 37, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [26.6], "bch": [], "hc": [{ "et": "28.03.2021 - 20:38:56", "cl": 4, "ucl": 11, "cal": 15, "tl": 37, "lcq": 26.6, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "ControllerInput", "rp": "AllScripts_ControllerInput.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 8, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0,100], "bch": [], "hc": [{ "et": "13.04.2021 - 16:35:14", "cl": 0, "ucl": 3, "cal": 3, "tl": 8, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:35:59", "cl": 0, "ucl": 3, "cal": 3, "tl": 8, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:39:38", "cl": 0, "ucl": 3, "cal": 3, "tl": 8, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:40:06", "cl": 3, "ucl": 0, "cal": 3, "tl": 8, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "MainCharacterController", "rp": "AllScripts_MainCharacterController.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 42, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [94.1,100], "bch": [], "hc": [{ "et": "13.04.2021 - 16:35:14", "cl": 16, "ucl": 1, "cal": 17, "tl": 42, "lcq": 94.1, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:35:59", "cl": 16, "ucl": 1, "cal": 17, "tl": 42, "lcq": 94.1, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:39:38", "cl": 16, "ucl": 1, "cal": 17, "tl": 42, "lcq": 94.1, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:40:06", "cl": 17, "ucl": 0, "cal": 17, "tl": 42, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
+    ]},
+  {
+    "name": "PlayTests",
+    "classes": [
+      { "name": "Tests.PlayMovementTest", "rp": "PlayTests_PlayMovementTest.html", "cl": 56, "ucl": 0, "cal": 56, "tl": 95, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100,80.3,100], "bch": [], "hc": [{ "et": "13.04.2021 - 16:35:14", "cl": 45, "ucl": 0, "cal": 45, "tl": 78, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:35:59", "cl": 45, "ucl": 0, "cal": 45, "tl": 78, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:39:38", "cl": 45, "ucl": 11, "cal": 56, "tl": 95, "lcq": 80.3, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:40:06", "cl": 56, "ucl": 0, "cal": 56, "tl": 95, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
     ]},
   {
     "name": "TestEdit",
     "classes": [
-      { "name": "Tests.ExampleTest", "rp": "TestEdit_ExampleTest.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 29, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "28.03.2021 - 20:38:56", "cl": 7, "ucl": 0, "cal": 7, "tl": 29, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Tests.MovementTest", "rp": "TestEdit_MovementTest.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 42, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0,100], "bch": [], "hc": [{ "et": "13.04.2021 - 16:35:14", "cl": 0, "ucl": 15, "cal": 15, "tl": 42, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:35:59", "cl": 15, "ucl": 0, "cal": 15, "tl": 42, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:39:38", "cl": 15, "ucl": 0, "cal": 15, "tl": 42, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "13.04.2021 - 16:40:06", "cl": 15, "ucl": 0, "cal": 15, "tl": 42, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
     ]},
 ];
 
-var historicCoverageExecutionTimes = [];
+var historicCoverageExecutionTimes = ["13.04.2021 - 16:39:38", "13.04.2021 - 16:35:59", "13.04.2021 - 16:35:14"];
 
 var riskHotspotMetrics = [
 ];
