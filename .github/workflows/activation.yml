@@ -1,5 +1,5 @@
 name: Acquire activation file
-on: [push]
+on: workflow_dispath
 jobs:
   activation:
     name: Request manual activation file 🔑
@@ -11,5 +11,6 @@ jobs:
     - name: Expose as artifact
       uses: actions/upload-artifact@v1
       with:
+        unityVersion: 2019.4.22f1
         name: ${{ steps.getManualLicenseFile.outputs.filePath }}
         path: ${{ steps.getManualLicenseFile.outputs.filePath }}

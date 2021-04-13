@@ -10,23 +10,28 @@ public class MainCharacterController : MonoBehaviour
 
     private Rigidbody2D rigidBody;
 
+    public IControllerInput controllerInput;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+
+        if (controllerInput == null)
+            controllerInput = new ControllerInput();
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
+        moveInput.x = controllerInput.Horizontal;
+        moveInput.y = controllerInput.Vertical;
         moveInput.Normalize();
     }
 
     private void FixedUpdate()
     {
-        rigidBody.MovePosition(rigidBody.position + CalculateMovement(moveInput, speed, Time.deltaTime));
+        rigidBody.MovePosition(rigidBody.position + CalculateMovement(moveInput, speed, controllerInput.GetTime));
     }
 
     public Vector2 CalculateMovement(Vector2 coords, float speed, float time)

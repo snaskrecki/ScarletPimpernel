@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2021-04-13_16-40-06" tag="">
+  <assembly name="AllScripts">
+    <class name="ControllerInput" coveredlines="3" coverablelines="3" totallines="8" coveredbranches="0" totalbranches="0" />
+    <class name="MainCharacterController" coveredlines="17" coverablelines="17" totallines="42" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="PlayTests">
+    <class name="Tests.PlayMovementTest" coveredlines="56" coverablelines="56" totallines="95" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="TestEdit">
+    <class name="Tests.MovementTest" coveredlines="15" coverablelines="15" totallines="42" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>
