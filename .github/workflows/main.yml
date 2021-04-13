@@ -43,6 +43,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           allowDirtyBuild: true
+          buildName: ScarletPimpernel-${{ matrix.targetPlatform }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           versioning: Semantic
