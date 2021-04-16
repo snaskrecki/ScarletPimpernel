@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    EnemyMovementAI moover;
+    EnemyMovementObject moover;
     Rigidbody2D body;
     // Start is called before the first frame update
     void Start()
     {
-        moover = GetComponent<EnemyMovementAI>();
+        moover = GetComponent<EnemyMovementAI>().GetMoover();
         body = GetComponent<Rigidbody2D>();
     }
 

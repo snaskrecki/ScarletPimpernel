@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-interface EnemyMovementAI
+public interface EnemyMovementAI
 {
-    Vector2 Move(float time);
+    EnemyMovementObject GetMoover();
 }
