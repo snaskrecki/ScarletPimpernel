@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>19.04.2021 - 18:50:13</Generatedon>
+    <Generatedon>19.04.2021 - 23:41:54</Generatedon>
     <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
     <Assemblies>3</Assemblies>
-    <Classes>11</Classes>
-    <Files>11</Files>
-    <Coveredlines>190</Coveredlines>
-    <Uncoveredlines>17</Uncoveredlines>
-    <Coverablelines>207</Coverablelines>
-    <Totallines>465</Totallines>
-    <Linecoverage>91.7</Linecoverage>
+    <Classes>14</Classes>
+    <Files>14</Files>
+    <Coveredlines>239</Coveredlines>
+    <Uncoveredlines>32</Uncoveredlines>
+    <Coverablelines>271</Coverablelines>
+    <Totallines>608</Totallines>
+    <Linecoverage>88.1</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
   <Coverage>
-    <Assembly name="AllScripts" classes="7" coverage="77.9" coveredlines="60" coverablelines="77" totallines="210" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="AllScripts" classes="9" coverage="69.2" coveredlines="72" coverablelines="104" totallines="275" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="ControllerInput" coverage="100" coveredlines="3" coverablelines="3" totallines="8" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="EnemyController" coverage="0" coveredlines="0" coverablelines="9" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="FollowMovement" coverage="0" coveredlines="0" coverablelines="4" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="EnemyController" coverage="0" coveredlines="0" coverablelines="13" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="FollowMovement" coverage="0" coveredlines="0" coverablelines="7" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="FollowMovementObj" coverage="100" coveredlines="21" coverablelines="21" totallines="49" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="LoopMovement" coverage="20" coveredlines="1" coverablelines="5" totallines="22" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="LoopMovementObj" coverage="100" coveredlines="15" coverablelines="15" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="MainCharacterController" coverage="100" coveredlines="20" coverablelines="20" totallines="49" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="RandomMovement" coverage="20" coveredlines="1" coverablelines="5" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="RandomMovementObj" coverage="73.3" coveredlines="11" coverablelines="15" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" />
     </Assembly>
     <Assembly name="PlayTests" classes="1" coverage="100" coveredlines="56" coverablelines="56" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="Tests.PlayMovementTest" coverage="100" coveredlines="56" coverablelines="56" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0" />
     </Assembly>
-    <Assembly name="TestEdit" classes="3" coverage="100" coveredlines="74" coverablelines="74" totallines="160" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="TestEdit" classes="4" coverage="100" coveredlines="111" coverablelines="111" totallines="238" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="Tests.FollowMovementTest" coverage="100" coveredlines="44" coverablelines="44" totallines="81" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Tests.LooperMovementTest" coverage="100" coveredlines="15" coverablelines="15" totallines="37" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Tests.MovementTest" coverage="100" coveredlines="15" coverablelines="15" totallines="42" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="Tests.RandomMovementTest" coverage="100" coveredlines="37" coverablelines="37" totallines="78" branchcoverage="" coveredbranches="0" totalbranches="0" />
     </Assembly>
   </Coverage>
 </CoverageReport>
