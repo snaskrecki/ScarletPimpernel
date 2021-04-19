@@ -10,9 +10,12 @@ public class FollowMovement : MonoBehaviour, EnemyMovementAI
 
     public float range;
 
-    void Awake()
+    public GameObject toFollow;
+
+    void OnEnable()
     {
-        moover = new FollowMovementObj(speed, transform, range);
+        moover = new FollowMovementObj(speed, range, this.transform, toFollow.transform);
+        moover.Move(0);
     }
 
     public EnemyMovementObject GetMoover() => moover;

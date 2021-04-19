@@ -7,17 +7,19 @@ public class FollowMovementObj : EnemyMovementObject
    
     private float speed;
 
-    public float rangeToChasePlayer;
+    private float rangeToChasePlayer;
 
-    public Transform transform;
+    public Transform myself;
+    public Transform playerToChase;
 
     private bool isChasing;
 
-    public FollowMovementObj(float speed, Transform transform, float range)
+    public FollowMovementObj(float speed, float range, Transform myself, Transform playerToChase)
     {
         this.speed = speed;
-        this.transform = transform;
+        this.myself = myself;
         this.rangeToChasePlayer = range;
+        this.playerToChase = playerToChase;
         isChasing = false;
     }
 
@@ -25,16 +27,17 @@ public class FollowMovementObj : EnemyMovementObject
     // Update is called once per frame
     public Vector2 Move(float deltaTime)
     {
-
         Vector2 moveDirection = Vector2.zero;
-        if (isChasing)
-        {
-            moveDirection = MainCharacterController.instance.transform.position - transform.position;
-        }
-        else if (Vector2.Distance(transform.position, MainCharacterController.instance.transform.position) < rangeToChasePlayer)
+
+        if (Vector2.Distance(myself.position, playerToChase.position) < rangeToChasePlayer)
         {
             isChasing = true;
         }
+        if (isChasing)
+        {
+            moveDirection = playerToChase.position - myself.position;
+        }
+        
 
         moveDirection.Normalize();
 

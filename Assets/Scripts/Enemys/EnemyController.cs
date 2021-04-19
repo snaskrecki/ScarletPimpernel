@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     {
         moover = GetComponent<EnemyMovementAI>().GetMoover();
         body = GetComponent<Rigidbody2D>();
+        moover.Move(0);
     }
 
     // Update is called once per frame
