@@ -8,18 +8,23 @@ public class LevelGenerator : MonoBehaviour
 	public static bool needGeneration;
 	private RoomTemplates templates;
 	private int[,] map_grid;
-	private const int DEFAULT_NUMBER_OF_ROOMS = 15;
-	private const int DEFAULT_GRID_SIZE = 23;
-
+	private const int DEFAULT_NUMBER_OF_ROOMS = 10;
+	private const int DEFAULT_GRID_SIZE = 13;
+	
 	private const float WIDTH = 19.2F;
 	private const float HEIGHT = 10.8F;
 	private Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
-
+	
+	private ArrayList objList;
+	private GameObject player;
+	
     // Start is called before the first frame update
     void Start()
     {
+		player = GameObject.FindGameObjectWithTag("Player");
 		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         needGeneration = false;
+		objList = new ArrayList();
 		Generate();
     }
 
@@ -27,38 +32,46 @@ public class LevelGenerator : MonoBehaviour
     void Update()
     {
         if(!needGeneration) return;
-
-		//clean
+		
+		//cleaning
+		foreach(UnityEngine.Object obj in objList)
+		{
+			Destroy(obj);
+		}
+		
+		objList.Clear();
+		
+		Generate();
+		needGeneration = false;
+    }
+	
+	void Generate()
+	{
+		map_grid = GenerateGraph();
+		player.transform.position =  new Vector3(0, 0, 0);
+		
+		bool spawned_door = false;
+		
 		for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
 		{
 			for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
 			{
 				if(map_grid[x, y] == 0) continue;
-
-				var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
-
-			}
-		}
-
-		Generate();
-		needGeneration = false;
-    }
-
-		void Generate()
-		{
-			map_grid = GenerateGraph();
-
-			for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
-			{
-				for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
+				
+				int type = map_grid[x, y] - ROOM - 1;
+				
+				if(!spawned_door && x != DEFAULT_GRID_SIZE / 2 && y != DEFAULT_GRID_SIZE / 2)
 				{
-					if(map_grid[x, y] == 0) continue;
-
-					var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
-					Instantiate(templates.allRooms[map_grid[x, y] - ROOM - 1], pos, Quaternion.identity);
+					type = EMPTY_ROOM;
+					spawned_door = true;
 				}
+				
+				var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
+				UnityEngine.Object obj = Instantiate(templates.allRooms[type], pos, Quaternion.identity);
+				objList.Add(obj);
 			}
 		}
+	}
 
 		//bit masks representing types of rooms
 
@@ -76,6 +89,8 @@ public class LevelGenerator : MonoBehaviour
   	private const int BOTTOM_DOOR = 1 << 2;
   	private const int LEFT_DOOR = 1 << 3;
   	private const int ROOM = 1 << 4;
+	
+	private const int EMPTY_ROOM = 15;
 
   	//types of rooms
   	//no room is 0
