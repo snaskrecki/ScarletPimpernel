@@ -59,5 +59,4 @@ MonoBehaviour:
   - {fileID: 6556443532553223421, guid: a2c26e52580f40143bfc5e37a23ef19e, type: 3}
   - {fileID: 4182796893887041363, guid: 0b5c9da341551e54a97230d72a974c7c, type: 3}
   - {fileID: 8428829926919849401, guid: f5882d1e8bde9a24c95b7543754db51c, type: 3}
-  closedRoom: {fileID: 8271437032799658839, guid: b790d8fc4c57b3b4e9e248e23ecd654a,
-    type: 3}
+  - {fileID: 4913034610944635203, guid: 68cd9edfe1a9bd14392455a036fea85b, type: 3}

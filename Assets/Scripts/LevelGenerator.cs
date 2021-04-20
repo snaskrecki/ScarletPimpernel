@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-	public bool needGeneration;
+	public static bool needGeneration;
 	private RoomTemplates templates;
 	private int[,] map_grid;
 	private const int DEFAULT_NUMBER_OF_ROOMS = 15;
 	private const int DEFAULT_GRID_SIZE = 23;
-	
+
 	private const float WIDTH = 19.2F;
 	private const float HEIGHT = 10.8F;
 	private Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
-	
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,40 +27,40 @@ public class LevelGenerator : MonoBehaviour
     void Update()
     {
         if(!needGeneration) return;
-		
+
 		//clean
 		for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
 		{
 			for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
 			{
 				if(map_grid[x, y] == 0) continue;
-				
+
 				var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
-				
+
 			}
 		}
-		
+
 		Generate();
 		needGeneration = false;
     }
-	
-	void Generate()
-	{
-		map_grid = GenerateGraph();
-		
-		for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
+
+		void Generate()
 		{
-			for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
+			map_grid = GenerateGraph();
+
+			for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
 			{
-				if(map_grid[x, y] == 0) continue;
-				
-				var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
-				Instantiate(templates.allRooms[map_grid[x, y] - ROOM - 1], pos, Quaternion.identity);
+				for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
+				{
+					if(map_grid[x, y] == 0) continue;
+
+					var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
+					Instantiate(templates.allRooms[map_grid[x, y] - ROOM - 1], pos, Quaternion.identity);
+				}
 			}
 		}
-	}
 
-	//bit masks representing types of rooms
+		//bit masks representing types of rooms
 
   	int[] dx = new int[]{0, 1, 0, -1};
   	int[] dy = new int[]{1, 0, -1, 0};
