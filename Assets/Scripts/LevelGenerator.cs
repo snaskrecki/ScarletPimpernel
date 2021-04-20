@@ -16,10 +16,12 @@ public class LevelGenerator : MonoBehaviour
 	private Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
 	
 	private ArrayList objList;
+	private GameObject player;
 	
     // Start is called before the first frame update
     void Start()
     {
+		player = GameObject.FindGameObjectWithTag("Player");
 		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         needGeneration = false;
 		objList = new ArrayList();
@@ -46,13 +48,12 @@ public class LevelGenerator : MonoBehaviour
 	void Generate()
 	{
 		map_grid = GenerateGraph();
+		player.transform.position =  new Vector3(0, 0, 0);
 		
 		bool spawned_door = false;
 		
 		for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
 		{
-			map_grid = GenerateGraph();
-
 			for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
 			{
 				if(map_grid[x, y] == 0) continue;
