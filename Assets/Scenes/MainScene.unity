@@ -272,7 +272,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EntryRoom
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1900282537621405175, guid: f729f1eb777144241ba55e76edfe7c42, type: 3}
+    - {fileID: 1900282537621405174, guid: f729f1eb777144241ba55e76edfe7c42, type: 3}
+    - {fileID: 1900282537621405172, guid: f729f1eb777144241ba55e76edfe7c42, type: 3}
+    - {fileID: 1900282537621405173, guid: f729f1eb777144241ba55e76edfe7c42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f729f1eb777144241ba55e76edfe7c42, type: 3}
 --- !u!1 &1900282537410611501 stripped
 GameObject:
