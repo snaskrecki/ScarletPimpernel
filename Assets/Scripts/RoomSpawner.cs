@@ -1,10 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomSpawner : MonoBehaviour
 {
-
     public int openingDirection;
     private const int DIR_NEED_BOTTOM_DOOR = 1;
     private const int DIR_NEED_TOP_DOOR = 2;
@@ -31,22 +31,22 @@ public class RoomSpawner : MonoBehaviour
         {
             if (openingDirection == DIR_NEED_BOTTOM_DOOR)
             {
-                rand = Random.Range(0, templates.bottomRooms.Length);
+                rand = UnityEngine.Random.Range(0, templates.bottomRooms.Length);
                 Instantiate(templates.bottomRooms[rand], transform.position, Quaternion.identity);
             }
             else if (openingDirection == DIR_NEED_TOP_DOOR)
             {
-                rand = Random.Range(0, templates.topRooms.Length);
+                rand = UnityEngine.Random.Range(0, templates.topRooms.Length);
                 Instantiate(templates.topRooms[rand], transform.position, Quaternion.identity);
             }
             else if (openingDirection == DIR_NEED_LEFT_DOOR)
             {
-                rand = Random.Range(0, templates.leftRooms.Length);
+                rand = UnityEngine.Random.Range(0, templates.leftRooms.Length);
                 Instantiate(templates.leftRooms[rand], transform.position, Quaternion.identity);
             }
             else if (openingDirection == DIR_NEED_RIGHT_DOOR)
             {
-                rand = Random.Range(0, templates.rightRooms.Length);
+                rand = UnityEngine.Random.Range(0, templates.rightRooms.Length);
                 Instantiate(templates.rightRooms[rand], transform.position, Quaternion.identity);
             }
 			
@@ -90,20 +90,19 @@ public class RoomSpawner : MonoBehaviour
 	private const int RBL_ROOM = RIGHT_DOOR | BOTTOM_DOOR | LEFT_DOOR | CLOSED_ROOM;
 	private const int TRBL_ROOM = TOP_DOOR | RIGHT_DOOR | BOTTOM_DOOR | LEFT_DOOR | CLOSED_ROOM;
 
-	private int[] generateGraph(int numberOfRooms = DEFAULT_NUMBER_OF_ROOMS, int grid_size = DEFAULT_GRID_SIZE)
+	private int[,] generateGraph(int numberOfRooms = DEFAULT_NUMBER_OF_ROOMS, int grid_size = DEFAULT_GRID_SIZE)
 	{
 		int[,] grid = new int[grid_size, grid_size];
-		Tuple<int, int>[] freeNeighbour = new int[grid_size * grid_size * 4];
+		Tuple<int, int>[] freeNeighbour = new Tuple<int, int>[grid_size * grid_size * 4];
 		int freeNSize = 0;
 		
 		//first room
-		grid[grid_size / 2][grid_size / 2] = CLOSED_ROOM;
+		grid[grid_size / 2, grid_size / 2] = CLOSED_ROOM;
 		numberOfRooms--;
 		
 		for(int i = 0; i < DIRECTIONS; i++)
 		{
-			freeNeighbour[freeNSize].Item1 = grid_size / 2 + dx[i];
-			freeNeighbour[freeNSize].Item2 = grid_size / 2 + dy[i];
+			freeNeighbour[freeNSize] = new Tuple<int, int>(grid_size / 2 + dx[i], grid_size / 2 + dy[i]);
 			freeNSize++;
 		}
 		
@@ -116,22 +115,22 @@ public class RoomSpawner : MonoBehaviour
 
 			do
 			{
-				id = Random.Range(0, freeNSize);
+				id = UnityEngine.Random.Range(0, freeNSize);
 				(freeNeighbour[id], freeNeighbour[freeNSize - 1]) = (freeNeighbour[freeNSize - 1], freeNeighbour[id]);
 				newRoomPos = freeNeighbour[freeNSize - 1];
 				freeNSize--;
 			}
-			while(grid[newRoomPos.Item1][newRoomPos.Item2] != 0);
+			while(grid[newRoomPos.Item1, newRoomPos.Item2] != 0);
 			
 			//place for new room found
-			grid[newRoomPos.Item1][newRoomPos.Item2] = CLOSED_ROOM;
+			grid[newRoomPos.Item1, newRoomPos.Item2] = CLOSED_ROOM;
 			
 			//opening doors betweem rooms and adding new possible room positions
 			for(int i = 0; i < DIRECTIONS; i++)
 			{
-				neighbour = (newRoomPos.Item1 + dx[i], newRoomPos.Item2 + dy[i]);
+				var neighbour = new Tuple<int, int>(newRoomPos.Item1 + dx[i], newRoomPos.Item2 + dy[i]);
 				
-				if(grid[neighbour.Item1][neighbour.Item2] == 0)
+				if(grid[neighbour.Item1, neighbour.Item2] == 0)
 				{
 					//i-th neighbour is a free field
 					freeNeighbour[freeNSize++] = neighbour;
@@ -139,8 +138,8 @@ public class RoomSpawner : MonoBehaviour
 				else
 				{
 					//opening door between two neighbouring
-					grid[newRoomPos.Item1][newRoomPos.Item2] |= 1 << i;
-					grid[neighbour.Item1][neighbour.Item2] |= 1 << ((i + 2) % 4);
+					grid[newRoomPos.Item1, newRoomPos.Item2] |= 1 << i;
+					grid[neighbour.Item1, neighbour.Item2] |= 1 << ((i + 2) % 4);
 				}
 			}
 			
