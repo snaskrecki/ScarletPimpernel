@@ -257,6 +257,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1900282537621405174, guid: f729f1eb777144241ba55e76edfe7c42,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900282537621405175, guid: f729f1eb777144241ba55e76edfe7c42,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1900282537621405179, guid: f729f1eb777144241ba55e76edfe7c42,
         type: 3}
       propertyPath: m_Name
@@ -264,6 +274,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f729f1eb777144241ba55e76edfe7c42, type: 3}
+--- !u!1 &1900282537410611501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1900282537621405179, guid: f729f1eb777144241ba55e76edfe7c42,
+    type: 3}
+  m_PrefabInstance: {fileID: 1900282537410611500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1900282537410611502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900282537410611501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c210bf2990ae6d54293c74c5816f2231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needGeneration: 0
 --- !u!1001 &2924241675088781017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -328,16 +357,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5496464900724108044, guid: 2595af6fe12fe664ba669dccf30571e4,
         type: 3}
-      propertyPath: topRooms.Array.data[3]
+      propertyPath: closedRoom
       value: 
-      objectReference: {fileID: 4000857576278990156, guid: 928bbca5045a6dc4d9de3782ed086fd8,
-        type: 3}
-    - target: {fileID: 5496464900724108044, guid: 2595af6fe12fe664ba669dccf30571e4,
-        type: 3}
-      propertyPath: leftRooms.Array.data[3]
-      value: 
-      objectReference: {fileID: 4000857576278990156, guid: 928bbca5045a6dc4d9de3782ed086fd8,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7122830080294575692, guid: 2595af6fe12fe664ba669dccf30571e4,
         type: 3}
       propertyPath: m_Name
