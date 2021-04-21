@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5834501667177063317}
   - component: {fileID: 5834501667177063322}
   m_Layer: 0
-  m_Name: Potworek
+  m_Name: PotworekLoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
