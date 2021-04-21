@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class MainCharacterController : MonoBehaviour
 {
-
+    // speed of character, should be about 3-10
     public float speed = 5;
+
+
     private Vector2 moveInput;
 
     private Rigidbody2D rigidBody;
 
     public IControllerInput controllerInput;
+
+    public static MainCharacterController instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

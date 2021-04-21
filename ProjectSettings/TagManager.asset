@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SpawnPoint
+  - Rooms
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2230650965
+    locked: 0
+  - name: Units
+    uniqueID: 3094687163
+    locked: 0
+  - name: Player
+    uniqueID: 24524831
+    locked: 0
+  - name: Enemy
+    uniqueID: 1690417743
     locked: 0

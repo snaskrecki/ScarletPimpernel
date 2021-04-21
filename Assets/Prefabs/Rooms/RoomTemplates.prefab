@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7122830080294575692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600294797936898325}
+  - component: {fileID: 5496464900724108044}
+  m_Layer: 0
+  m_Name: RoomTemplates
+  m_TagString: Rooms
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &600294797936898325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7122830080294575692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.31298, y: 7.134012, z: -54.4412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5496464900724108044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7122830080294575692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9612aed00fbb57418c17fd0cfac75c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRooms:
+  - {fileID: 3128177342560192039, guid: 848d21d4096f9324f917324aaac05950, type: 3}
+  - {fileID: 7976923529197347914, guid: 89bec31ef9762a849b4e99971c8cc412, type: 3}
+  - {fileID: 2753493921197569167, guid: 435ec802c33184f45b8d975970f182ac, type: 3}
+  - {fileID: 502059631232356618, guid: fd392044aede1064ba56861102005f43, type: 3}
+  - {fileID: 3482586716935657594, guid: 04c365d4b389cfa489cc52bfcd60f49d, type: 3}
+  - {fileID: 3154060350263638250, guid: 9709ec40525aae5498fa45bebd37ec1a, type: 3}
+  - {fileID: 2507155150867944071, guid: a0ac615da4936cb459c9ab7f649e7318, type: 3}
+  - {fileID: 3057480779774589404, guid: 591589eba1ce71048a26f29e9b5cccc6, type: 3}
+  - {fileID: 4000857576278990156, guid: 928bbca5045a6dc4d9de3782ed086fd8, type: 3}
+  - {fileID: 2751699242005768659, guid: c2cd1e123f6c26d4c94306e3b7e99f1b, type: 3}
+  - {fileID: 523296493084549696, guid: 9fdf4c9a64eeb4144a29cced9798186d, type: 3}
+  - {fileID: 6153132775788327936, guid: 50e37cffcc8dc414da639d53c20bbb8e, type: 3}
+  - {fileID: 6556443532553223421, guid: a2c26e52580f40143bfc5e37a23ef19e, type: 3}
+  - {fileID: 4182796893887041363, guid: 0b5c9da341551e54a97230d72a974c7c, type: 3}
+  - {fileID: 8428829926919849401, guid: f5882d1e8bde9a24c95b7543754db51c, type: 3}
+  - {fileID: 4913034610944635203, guid: 68cd9edfe1a9bd14392455a036fea85b, type: 3}

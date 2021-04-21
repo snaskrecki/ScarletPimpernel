@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
-    public class MovementTest
+    public class PlayerMovementTest
     {
         [Test]
         public void TestHorizontalMovement()
@@ -36,6 +36,26 @@ namespace Tests
             Assert.AreEqual(
                 new Vector2(2, 2),
                 character.CalculateMovement(new Vector2(1, 1), 1, 2));
+        }
+
+        [Test]
+        public void TestNegativeSpeed()
+        {
+            var gameObject = new GameObject();
+            var character = gameObject.AddComponent<MainCharacterController>();
+            Assert.AreEqual(
+                new Vector2(-2, -2),
+                character.CalculateMovement(new Vector2(1, 1), -1, 2));
+        }
+
+        [Test]
+        public void TestNegativeTime()
+        {
+            var gameObject = new GameObject();
+            var character = gameObject.AddComponent<MainCharacterController>();
+            Assert.AreEqual(
+                new Vector2(-2, -2),
+                character.CalculateMovement(new Vector2(1, 1), 1, -2));
         }
 
     }
