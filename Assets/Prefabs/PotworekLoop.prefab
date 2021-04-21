@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5834501667177063318}
   - component: {fileID: 5834501667177063317}
   - component: {fileID: 5834501667177063322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PotworekLoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1690417743
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: d0f0bb7b0aae47846a42f0be578f602f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

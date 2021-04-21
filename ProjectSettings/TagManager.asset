@@ -15,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -48,4 +48,10 @@ TagManager:
     locked: 0
   - name: Units
     uniqueID: 3094687163
+    locked: 0
+  - name: Player
+    uniqueID: 24524831
+    locked: 0
+  - name: Enemy
+    uniqueID: 1690417743
     locked: 0
