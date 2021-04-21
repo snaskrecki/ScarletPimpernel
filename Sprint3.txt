@@ -6,6 +6,6 @@ Sprint 3
   > Interakcja przeciwnik - gracz
 	Walka oddziałowuje wzajemnie na statystyki (takie jak n. punkty życia) przeciwników i gracza.
   > Statystyki gracza i przeciwników
-	Wprowadzenie statystyk (takich jak punkty życia, prędkość poruszania się itp.) dla graczy i 		przeciwników. Przejście na kolejny poziom modyfikuje statystyki.
+	Wprowadzenie statystyk (takich jak punkty życia, prędkość poruszania się itp.) dla graczy i przeciwników. Przejście na kolejny poziom modyfikuje statystyki.
   > Architektura
  	Dokument opisujący architekturę.
