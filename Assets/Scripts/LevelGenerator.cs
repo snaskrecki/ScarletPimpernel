@@ -6,14 +6,14 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
 	public static bool needGeneration;
-	private RoomTemplates templates;
-	private int[,] map_grid;
+	private static RoomTemplates templates;
+	private static int[,] map_grid;
 	private const int DEFAULT_NUMBER_OF_ROOMS = 10;
 	private const int DEFAULT_GRID_SIZE = 13;
 
 	private const float WIDTH = 19.2F;
 	private const float HEIGHT = 10.8F;
-	private Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
+	private static Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
 
 	private ArrayList objList;
 	private GameObject player;
@@ -33,50 +33,50 @@ public class LevelGenerator : MonoBehaviour
     {
         if(!needGeneration) return;
 
-				//cleaning
-				foreach(UnityEngine.Object obj in objList)
-				{
-					Destroy(obj);
-				}
+		//cleaning
+		foreach(UnityEngine.Object obj in objList)
+		{
+			Destroy(obj);
+		}
+		
+		objList.Clear();
 
-				objList.Clear();
-
-				Generate();
-				needGeneration = false;
+		Generate();
+		needGeneration = false;
     }
 
-		void Generate()
-		{
+	void Generate()
+	{
 			map_grid = GenerateGraph();
 			player.transform.position =  new Vector3(0, 0, 0);
 
 			bool spawned_door = false;
 
-			for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
+		for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
+		{
+			for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
 			{
-				for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
+				if(map_grid[x, y] == 0) continue;
+
+				int type = map_grid[x, y] - ROOM - 1;
+				
+				if(!spawned_door && x != DEFAULT_GRID_SIZE / 2 && y != DEFAULT_GRID_SIZE / 2)
 				{
-					if(map_grid[x, y] == 0) continue;
-
-					int type = map_grid[x, y] - ROOM - 1;
-
-					if(!spawned_door && x != DEFAULT_GRID_SIZE / 2 && y != DEFAULT_GRID_SIZE / 2)
-					{
-						type = EMPTY_ROOM;
-						spawned_door = true;
-					}
-
-					var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
-					UnityEngine.Object obj = Instantiate(templates.allRooms[type], pos, Quaternion.identity);
-					objList.Add(obj);
+					type = EMPTY_ROOM;
+					spawned_door = true;
 				}
+
+				var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
+				UnityEngine.Object obj = Instantiate(templates.allRooms[type], pos, Quaternion.identity);
+				objList.Add(obj);
 			}
 		}
+	}
 
 		//bit masks representing types of rooms
 
-  	int[] dx = new int[]{0, 1, 0, -1};
-  	int[] dy = new int[]{1, 0, -1, 0};
+  	static int[] dx = new int[]{0, 1, 0, -1};
+  	static int[] dy = new int[]{1, 0, -1, 0};
   	const int DIRECTIONS = 4;
 
   	//bits representing doors
@@ -111,7 +111,7 @@ public class LevelGenerator : MonoBehaviour
   	private const int RBL_ROOM = RIGHT_DOOR | BOTTOM_DOOR | LEFT_DOOR | ROOM;
   	private const int TRBL_ROOM = TOP_DOOR | RIGHT_DOOR | BOTTOM_DOOR | LEFT_DOOR | ROOM;
 
-  	private int[,] GenerateGraph(int numberOfRooms = DEFAULT_NUMBER_OF_ROOMS, int grid_size = DEFAULT_GRID_SIZE)
+  	public static int[,] GenerateGraph(int numberOfRooms = DEFAULT_NUMBER_OF_ROOMS, int grid_size = DEFAULT_GRID_SIZE)
   	{
   		int[,] grid = new int[grid_size, grid_size];
   		Tuple<int, int>[] freeNeighbour = new Tuple<int, int>[grid_size * grid_size * 4];
@@ -133,11 +133,11 @@ public class LevelGenerator : MonoBehaviour
   			//finding a random free field on a grid that neighbours with a room
   			int id;
   			Tuple<int, int> newRoomPos;
-
+  				
   			do
   			{
   				id = UnityEngine.Random.Range(0, freeNSize);
-  				(freeNeighbour[id], freeNeighbour[freeNSize - 1]) = (freeNeighbour[freeNSize - 1], freeNeighbour[id]);
+				(freeNeighbour[id], freeNeighbour[freeNSize - 1]) = (freeNeighbour[freeNSize - 1], freeNeighbour[id]);
   				newRoomPos = freeNeighbour[freeNSize - 1];
   				freeNSize--;
   			}
@@ -151,15 +151,14 @@ public class LevelGenerator : MonoBehaviour
   			{
   				var neighbour = new Tuple<int, int>(newRoomPos.Item1 + dx[i], newRoomPos.Item2 + dy[i]);
 
-				if(neighbour.Item1 < 0 || neighbour.Item1 >= DEFAULT_GRID_SIZE || neighbour.Item2 < 0 || neighbour.Item2 >= DEFAULT_GRID_SIZE)
-				{
-					continue;
-				}
-
+				if(!InBounds(neighbour, grid_size)) continue;
+				
   				if(grid[neighbour.Item1, neighbour.Item2] == 0)
   				{
   					//i-th neighbour is a free field
-  					freeNeighbour[freeNSize++] = neighbour;
+  					freeNeighbour[freeNSize] = neighbour;
+					freeNSize++;
+					
   				}
   				else
   				{
@@ -173,5 +172,10 @@ public class LevelGenerator : MonoBehaviour
   		}
 
   		return grid;
+	}
+	
+	public static bool InBounds(Tuple<int, int> point, int side)
+	{
+		return 0 <= point.Item1 && point.Item1 < side && 0 <= point.Item2 && point.Item2 < side;
 	}
 }
