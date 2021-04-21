@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7976923529197347914
+--- !u!1 &3154060350263638250
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5152861861532545835}
-  - component: {fileID: 1316054310317447002}
-  - component: {fileID: 8494820219358022407}
-  - component: {fileID: 7776088383530336271}
+  - component: {fileID: 4816798844868218005}
+  - component: {fileID: 7380798860028114362}
+  - component: {fileID: 5035728492504770863}
   m_Layer: 0
-  m_Name: R
+  m_Name: RB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5152861861532545835
+--- !u!4 &4816798844868218005
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7976923529197347914}
+  m_GameObject: {fileID: 3154060350263638250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
@@ -33,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1316054310317447002
+--- !u!212 &7380798860028114362
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7976923529197347914}
+  m_GameObject: {fileID: 3154060350263638250}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: -2064316331
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bbd1672f8c3f21d45a80337890f7771b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c440bfb1b8e16124fbd7a8bbaabbd8bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,34 +82,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &8494820219358022407
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7976923529197347914}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!60 &7776088383530336271
+--- !u!60 &5035728492504770863
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7976923529197347914}
+  m_GameObject: {fileID: 3154060350263638250}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -129,16 +107,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
+    - - {x: 5.7855062, y: -0.6074942}
+      - {x: 5.814458, y: -3.0224137}
+      - {x: 1.1153635, y: -3.0313413}
+      - {x: 1.1242667, y: -3.5861933}
+      - {x: 6.4141445, y: -3.5973766}
+      - {x: 6.4097533, y: -0.59855783}
     - - {x: -6.3999996, y: 3.6}
-      - {x: -6.3999996, y: -3.6}
-      - {x: 6.4023542, y: -3.6033335}
-      - {x: 6.404978, y: -0.59555686}
-      - {x: 6.136351, y: -0.5997555}
-      - {x: 5.8166895, y: -0.60475206}
-      - {x: 5.8274984, y: -3.0107203}
-      - {x: -5.798623, y: -3.0198355}
-      - {x: -5.8144383, y: 3.0085366}
-      - {x: 5.818969, y: 3.0055408}
-      - {x: 5.8141036, y: 0.59089786}
-      - {x: 6.4035673, y: 0.58797646}
+      - {x: -6.41612, y: -3.6080623}
+      - {x: -1.0961018, y: -3.5624452}
+      - {x: -1.080941, y: -2.996439}
+      - {x: -5.8049808, y: -3.0355215}
+      - {x: -5.795112, y: 2.9882238}
+      - {x: 5.806286, y: 3.0478292}
+      - {x: 5.8157096, y: 0.58704746}
+      - {x: 6.410595, y: 0.58424073}
       - {x: 6.3999996, y: 3.6}
