@@ -23,7 +23,7 @@ public class EnemyController : MonoBehaviour
     {
         if (startFireInterval == 0)
         {
-            Instantiate(bullet, transform.position, transform.rotation);
+            Instantiate(bullet, bulletPoint.position, bulletPoint.rotation);
             startFireInterval = baseFireInterval;
         }
         else
