@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1690417743
-  m_SortingLayer: -2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: d0f0bb7b0aae47846a42f0be578f602f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -97,6 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fcc206ed832154b84c38bec093272f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 5804944351264310358, guid: d587b911b95fd5b4a8c344ce89e87860, type: 3}
+  bulletPoint: {fileID: 354282220822044538, guid: 5b742b6c4d6f1be4a9387f6bdc1c683c,
+    type: 3}
+  baseFireInterval: 500
+  startFireInterval: 500
 --- !u!50 &5877439188823761152
 Rigidbody2D:
   serializedVersion: 4
@@ -158,4 +163,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   range: 5
-  toFollow: {fileID: 0}
+  toFollow: {fileID: 3826735366806943092, guid: 687482d1f5daa994ab9763a2ca76ecd2,
+    type: 3}
