@@ -2,5 +2,5 @@
 
 public interface EnemyMovementAI
 {
-    EnemyMovementObject GetMoover();
+    EnemyMovementObject MakeMoover(GameObject target);
 }

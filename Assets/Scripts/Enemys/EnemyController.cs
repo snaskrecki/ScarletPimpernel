@@ -6,31 +6,21 @@ public class EnemyController : MonoBehaviour
 {
     EnemyMovementObject moover;
     Rigidbody2D body;
-    public GameObject bullet;
-    public Transform bulletPoint;
-    public int baseFireInterval;
-    public int startFireInterval;
+    EnemyShootingObject shooter;
     // Start is called before the first frame update
     void Start()
     {
-        moover = GetComponent<EnemyMovementAI>().GetMoover();
+        var player = GameObject.FindGameObjectWithTag("Player");
+        moover = GetComponent<EnemyMovementAI>().MakeMoover(player);
         body = GetComponent<Rigidbody2D>();
-        moover.Move(0);
+        shooter = GetComponent<EnemyShootingAI>().MakeShooter(player);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startFireInterval == 0)
-        {
-            Instantiate(bullet, bulletPoint.position, bulletPoint.rotation);
-            startFireInterval = baseFireInterval;
-        }
-        else
-        {
-            startFireInterval--;
-        }
-
+        shooter.ShootDecision(Time.deltaTime);
     }
 
     private void FixedUpdate()
