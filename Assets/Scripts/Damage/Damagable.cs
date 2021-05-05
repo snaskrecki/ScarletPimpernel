@@ -14,7 +14,14 @@ public class Damagable : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
-        health = Mathf.Clamp(0, health + amount, maxHealth);
+        health = Mathf.Clamp(health + amount, 0, maxHealth);
         Debug.Log(health + "/" + maxHealth);
+    }
+
+    public int GetHealth() => health;
+
+    public void ResetHealth()
+    {
+        health = maxHealth;
     }
 }

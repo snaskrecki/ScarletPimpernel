@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     Rigidbody2D body;
     EnemyShootingObject shooter;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
         moover = GetComponent<EnemyMovementAI>().MakeMoover(player);
