@@ -13,6 +13,11 @@ public class Door : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
     {
-      LevelGenerator.needGeneration = true;
+		MainCharacterController controller = other.GetComponent<MainCharacterController>();
+
+		if(controller != null)
+		{
+			LevelGenerator.needGeneration = true;
+		}
     }
 }

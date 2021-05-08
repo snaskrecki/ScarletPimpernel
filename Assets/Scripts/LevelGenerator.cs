@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
 	private static RoomTemplates templates;
 	private static EnemysTemplates enemys_templates;
 	private static int[,] map_grid;
-	private const int DEFAULT_NUMBER_OF_ROOMS = 10;
+	private const int DEFAULT_NUMBER_OF_ROOMS = 4;
 	private const int DEFAULT_GRID_SIZE = 13;
 
 	private const float WIDTH = 19.2F;
@@ -76,11 +76,12 @@ public class LevelGenerator : MonoBehaviour
 					if((map_grid[x, y] & DOOR_ROOM) != 0)
 					{
 						SpawnDoor(x, y);
+						type -= DOOR_ROOM;
 					}
 
 					var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
 					UnityEngine.Object obj = Instantiate(templates.allRooms[type], pos, Quaternion.identity);
-					generateNewEnemy(pos);
+					//generateNewEnemy(pos);
 					objList.Add(obj);
 				}
 			}
@@ -204,7 +205,7 @@ public class LevelGenerator : MonoBehaviour
 
 	private void SpawnDoor(int x, int y)
 	{
-		var pos = new Vector3(bottomLeftCorner.x + x * WIDTH + WIDTH / 2, bottomLeftCorner.y + y * HEIGHT + HEIGHT / 2, 0);
+		var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
 		Debug.Log("drzwi");
 		UnityEngine.Object obj = Instantiate(door, pos, Quaternion.identity);
 		Debug.Log("drzwi2");
