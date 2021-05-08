@@ -13,9 +13,12 @@ public class LevelGenerator : MonoBehaviour
 
 	private const float WIDTH = 19.2F;
 	private const float HEIGHT = 10.8F;
+	private const int DOOR_ROOM = 1 << 6;
+	
 	private static Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
 
 	private ArrayList objList;
+	private GameObject door;
 	private GameObject player;
 
     // Start is called before the first frame update
@@ -23,6 +26,7 @@ public class LevelGenerator : MonoBehaviour
     {
 		player = GameObject.FindGameObjectWithTag("Player");
 		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+		door = GameObject.FindGameObjectWithTag("Door");
         needGeneration = false;
 		objList = new ArrayList();
 		Generate();
@@ -44,14 +48,12 @@ public class LevelGenerator : MonoBehaviour
 		Generate();
 		needGeneration = false;
     }
-
+	
 	void Generate()
 	{
-			map_grid = GenerateGraph();
-			player.transform.position =  new Vector3(0, 0, 0);
-
-			bool spawned_door = false;
-
+		map_grid = GenerateGraph();
+		player.transform.position =  new Vector3(0, 0, 0);
+		
 		for(int x = 0; x < DEFAULT_GRID_SIZE; x++)
 		{
 			for(int y = 0; y < DEFAULT_GRID_SIZE; y++)
@@ -60,10 +62,9 @@ public class LevelGenerator : MonoBehaviour
 
 				int type = map_grid[x, y] - ROOM - 1;
 				
-				if(!spawned_door && x != DEFAULT_GRID_SIZE / 2 && y != DEFAULT_GRID_SIZE / 2)
+				if((map_grid[x, y] & DOOR_ROOM) != 0)
 				{
-					type = EMPTY_ROOM;
-					spawned_door = true;
+					SpawnDoor(x, y);
 				}
 
 				var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
@@ -126,6 +127,11 @@ public class LevelGenerator : MonoBehaviour
   			freeNeighbour[freeNSize] = new Tuple<int, int>(grid_size / 2 + dx[i], grid_size / 2 + dy[i]);
   			freeNSize++;
   		}
+		
+		/* lower numbers will mean door room will be generated later,
+		*  which means heuristically door room will be further from spawn room
+		*/
+		int door_room_id = UnityEngine.Random.Range(1, numberOfRooms / 2);
 
   		//main loop
   		while(numberOfRooms > 0)
@@ -145,6 +151,11 @@ public class LevelGenerator : MonoBehaviour
 
   			//place for new room found
   			grid[newRoomPos.Item1, newRoomPos.Item2] = ROOM;
+			
+			if(numberOfRooms == door_room_id)
+			{
+				grid[newRoomPos.Item1, newRoomPos.Item2] |= DOOR_ROOM;
+			}
 
   			//opening doors betweem rooms and adding new possible room positions
   			for(int i = 0; i < DIRECTIONS; i++)
@@ -177,5 +188,14 @@ public class LevelGenerator : MonoBehaviour
 	public static bool InBounds(Tuple<int, int> point, int side)
 	{
 		return 0 <= point.Item1 && point.Item1 < side && 0 <= point.Item2 && point.Item2 < side;
+	}
+	
+	private void SpawnDoor(int x, int y)
+	{
+		var pos = new Vector3(bottomLeftCorner.x + x * WIDTH + WIDTH / 2, bottomLeftCorner.y + y * HEIGHT + HEIGHT / 2, 0);
+		Debug.Log("drzwi");
+		UnityEngine.Object obj = Instantiate(door, pos, Quaternion.identity);
+		Debug.Log("drzwi2");
+		objList.Add(obj);
 	}
 }
