@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    void Start() {}
+	private Rigidbody2D rigidBody;
+	
+    void Start()
+	{
+		rigidBody = GetComponent<Rigidbody2D>();
+	}
 
-    void Update() {}
+	void OnTriggerEnter2D(Collider2D other)
+    {
+      LevelGenerator.needGeneration = true;
+    }
 }
