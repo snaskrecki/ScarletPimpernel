@@ -10,13 +10,6 @@ public class LoopMovement : MonoBehaviour, EnemyMovementAI
 
     public Vector2[] directions = { Vector2.left, Vector2.up, Vector2.right, Vector2.down };
 
-    LoopMovementObj moover;
+    public EnemyMovementObject GetMoover() => new LoopMovementObj(changeTime, speed, directions);
 
-    void Awake()
-    {
-        moover = new LoopMovementObj(changeTime, speed, directions);
-    }
-
-    public EnemyMovementObject GetMoover() => moover;
-    
 }

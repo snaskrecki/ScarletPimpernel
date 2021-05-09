@@ -26,13 +26,19 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		player = GameObject.FindGameObjectWithTag("Player");
-		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-		enemys_templates = GameObject.FindGameObjectWithTag("Enemys").GetComponent<EnemysTemplates>();
-		door = GameObject.FindGameObjectWithTag("Door");
-        needGeneration = false;
-		objList = new ArrayList();
-		Generate();
+
+				player = GameObject.FindGameObjectWithTag("Player");
+
+				templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+				enemys_templates = GameObject.FindGameObjectWithTag("Enemys").GetComponent<EnemysTemplates>();
+				door = GameObject.FindGameObjectWithTag("Door");
+		    needGeneration = false;
+				objList = new ArrayList();
+				enemysList = new ArrayList();
+
+				Debug.Log(enemys_templates.allEnemys.Length);
+
+				Generate();
     }
 
     // Update is called once per frame
@@ -40,24 +46,31 @@ public class LevelGenerator : MonoBehaviour
     {
         if(!needGeneration) return;
 
-		//cleaning
-		foreach(UnityEngine.Object obj in objList)
-		{
-			Destroy(obj);
-		}
+				//cleaning
+				foreach(UnityEngine.Object obj in enemysList)
+				{
+					Destroy(obj);
+				}
 
-		objList.Clear();
+				enemysList.Clear();
 
-		Generate();
-		needGeneration = false;
+				foreach(UnityEngine.Object obj in objList)
+				{
+					Destroy(obj);
+				}
+
+				objList.Clear();
+
+				Generate();
+				needGeneration = false;
     }
 
 		void generateNewEnemy(Vector3 zero_position)
 		{
-			System.Random rnd = new System.Random();
-			int index  = rnd.Next(0, enemys_templates.allEnemys.Length- 1);
-			UnityEngine.Object  new_enemy = Instantiate(enemys_templates.allEnemys[index], zero_position, Quaternion.identity);
-			enemysList.Add(new_enemy);
+			int index = UnityEngine.Random.Range(0, enemys_templates.allEnemys.Length);
+			Debug.Log("Add enemy");
+			UnityEngine.Object new_enemy = Instantiate(enemys_templates.allEnemys[index], zero_position, Quaternion.identity);
+		  enemysList.Add(new_enemy);
 		}
 
 		void Generate()
@@ -73,15 +86,16 @@ public class LevelGenerator : MonoBehaviour
 
 					int type = map_grid[x, y] - ROOM - 1;
 
+					var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
+
 					if((map_grid[x, y] & DOOR_ROOM) != 0)
 					{
-						SpawnDoor(x, y);
-						type -= DOOR_ROOM;
+						SpawnDoor(pos);
+						type ^= DOOR_ROOM;
 					}
 
-					var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
 					UnityEngine.Object obj = Instantiate(templates.allRooms[type], pos, Quaternion.identity);
-					//generateNewEnemy(pos);
+					generateNewEnemy(pos);
 					objList.Add(obj);
 				}
 			}
@@ -104,7 +118,7 @@ public class LevelGenerator : MonoBehaviour
   	private const int LEFT_DOOR = 1 << 3;
   	private const int ROOM = 1 << 4;
 
-	private const int EMPTY_ROOM = 15;
+		private const int EMPTY_ROOM = 15;
 
   	//types of rooms
   	//no room is 0
@@ -203,12 +217,9 @@ public class LevelGenerator : MonoBehaviour
 		return 0 <= point.Item1 && point.Item1 < side && 0 <= point.Item2 && point.Item2 < side;
 	}
 
-	private void SpawnDoor(int x, int y)
+	private void SpawnDoor(Vector3 position)
 	{
-		var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
-		Debug.Log("drzwi");
-		UnityEngine.Object obj = Instantiate(door, pos, Quaternion.identity);
-		Debug.Log("drzwi2");
-		objList.Add(obj);
+		Debug.Log(position);
+		door.transform.position = position;
 	}
 }
