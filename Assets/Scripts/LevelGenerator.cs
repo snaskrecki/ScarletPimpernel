@@ -11,6 +11,7 @@ public class LevelGenerator : MonoBehaviour
 	private static int[,] map_grid;
 	private const int DEFAULT_NUMBER_OF_ROOMS = 4;
 	private const int DEFAULT_GRID_SIZE = 13;
+	private const int DEFAULT_NUMBER_OF_ENEMYS = 4;
 
 	private const float WIDTH = 19.2F;
 	private const float HEIGHT = 10.8F;
@@ -69,6 +70,8 @@ public class LevelGenerator : MonoBehaviour
 		{
 			int index = UnityEngine.Random.Range(0, enemys_templates.allEnemys.Length);
 			Debug.Log("Add enemy");
+			Vector3 new_pos = new Vector3(zero_position[0] + UnityEngine.Random.Range(0, WIDTH/2),
+			 zero_position[1] + UnityEngine.Random.Range(0, HEIGHT/2), zero_position[2]);
 			UnityEngine.Object new_enemy = Instantiate(enemys_templates.allEnemys[index], zero_position, Quaternion.identity);
 		  enemysList.Add(new_enemy);
 		}
@@ -85,6 +88,7 @@ public class LevelGenerator : MonoBehaviour
 					if(map_grid[x, y] == 0) continue;
 
 					int type = map_grid[x, y] - ROOM - 1;
+					int current_number_of_enemys = UnityEngine.Random.Range(1, DEFAULT_NUMBER_OF_ENEMYS);
 
 					var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
 
@@ -92,10 +96,15 @@ public class LevelGenerator : MonoBehaviour
 					{
 						SpawnDoor(pos);
 						type ^= DOOR_ROOM;
+
+						// w ostatnim pokoju znajduje się więcej przeciwników
+						current_number_of_enemys *= 2;
 					}
 
 					UnityEngine.Object obj = Instantiate(templates.allRooms[type], pos, Quaternion.identity);
-					generateNewEnemy(pos);
+
+					for (int i = 0; i < current_number_of_enemys; i++)
+						generateNewEnemy(pos);
 					objList.Add(obj);
 				}
 			}
