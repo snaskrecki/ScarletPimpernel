@@ -128,11 +128,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101484476058911767, guid: 5f19b4eb5e626a9418897c8d44816d3b,
+        type: 3}
+      propertyPath: toFollow
+      value: 
+      objectReference: {fileID: 1588203514}
     - target: {fileID: 5877439188823761153, guid: 5f19b4eb5e626a9418897c8d44816d3b,
         type: 3}
       propertyPath: m_Name
       value: PotworekFollow
       objectReference: {fileID: 0}
+    - target: {fileID: 5877439188823761154, guid: 5f19b4eb5e626a9418897c8d44816d3b,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 5804944351264310358, guid: d587b911b95fd5b4a8c344ce89e87860,
+        type: 3}
     - target: {fileID: 5877439188823761154, guid: 5f19b4eb5e626a9418897c8d44816d3b,
         type: 3}
       propertyPath: bulletPoint

@@ -35,6 +35,9 @@ public class Damagable : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
+        DestroyImmediate(gameObject);
+        Time.timeScale = 0;
+        // TODO show Game Over scene in next sprint.
+        Application.Quit();
     }
 }
