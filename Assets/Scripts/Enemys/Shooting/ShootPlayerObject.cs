@@ -16,7 +16,7 @@ public class ShootPlayerObject : EnemyShootingObject
         this.bulletPrefab = bulletPrefab;
         this.me = me;
         this.target = target;
-        timePassed = 0;
+        this.timePassed = 0;
         this.bulletSpeed = bulletSpeed;
     }
 
