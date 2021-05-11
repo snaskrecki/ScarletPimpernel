@@ -62,6 +62,12 @@ public class LevelGenerator : MonoBehaviour
 
 				objList.Clear();
 
+				// change statistics <- choice by player in sprint 5
+				player.speed += 0.1;
+				LoopMovementObj.speed += 0.15;
+				FollowMovementObj.speed +=0.15;
+				RandomMovementObj.speed += 0.15;
+
 				Generate();
 				needGeneration = false;
     }
