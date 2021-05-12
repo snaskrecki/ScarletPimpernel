@@ -1,0 +1,6 @@
+Sprint 4
+  > Dodanie przedmiotów na planszy
+	Przedmioty są generowane osobno dla każdego poziomu. Modyfikują one pozytywnie lub negatywnie statystyki gracza, niektóre z nich nie zmieniają nic. 
+	Nie można przez nie przechodzić, także pociski przez nie nie przelatują. 
+  > Animacje bohatera
+	Dodanie animacji przy poruszaniu się figurki gracza, przy walce oraz gdy gracz się nie porusza.
