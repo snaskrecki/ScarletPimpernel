@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2021-05-11_17-34-13" tag="">
+  <assembly name="AllScripts">
+    <class name="ControllerInput" coveredlines="3" coverablelines="6" totallines="8" coveredbranches="0" totalbranches="0" />
+    <class name="Damagable" coveredlines="28" coverablelines="34" totallines="43" coveredbranches="0" totalbranches="0" />
+    <class name="Damager" coveredlines="7" coverablelines="14" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Destroyer" coveredlines="0" coverablelines="12" totallines="14" coveredbranches="0" totalbranches="0" />
+    <class name="EmptyRoom" coveredlines="0" coverablelines="6" totallines="11" coveredbranches="0" totalbranches="0" />
+    <class name="EnemyBullet" coveredlines="6" coverablelines="24" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="EnemyController" coveredlines="0" coverablelines="24" totallines="30" coveredbranches="0" totalbranches="0" />
+    <class name="FollowMovement" coveredlines="0" coverablelines="2" totallines="14" coveredbranches="0" totalbranches="0" />
+    <class name="FollowMovementObj" coveredlines="0" coverablelines="42" totallines="49" coveredbranches="0" totalbranches="0" />
+    <class name="LevelGenerator" coveredlines="0" coverablelines="166" totallines="181" coveredbranches="0" totalbranches="0" />
+    <class name="LoopMovement" coveredlines="1" coverablelines="4" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="LoopMovementObj" coveredlines="0" coverablelines="30" totallines="36" coveredbranches="0" totalbranches="0" />
+    <class name="MainCameraController" coveredlines="0" coverablelines="12" totallines="20" coveredbranches="0" totalbranches="0" />
+    <class name="MainCharacterController" coveredlines="21" coverablelines="40" totallines="51" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerCombat" coveredlines="4" coverablelines="27" totallines="48" coveredbranches="0" totalbranches="0" />
+    <class name="RandomMovement" coveredlines="1" coverablelines="4" totallines="18" coveredbranches="0" totalbranches="0" />
+    <class name="RandomMovementObj" coveredlines="0" coverablelines="30" totallines="36" coveredbranches="0" totalbranches="0" />
+    <class name="ShootDirectionsFactory" coveredlines="3" coverablelines="4" totallines="14" coveredbranches="0" totalbranches="0" />
+    <class name="ShootDirectionsObject" coveredlines="21" coverablelines="42" totallines="37" coveredbranches="0" totalbranches="0" />
+    <class name="ShootPlayerFactory" coveredlines="1" coverablelines="2" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="ShootPlayerObject" coveredlines="18" coverablelines="36" totallines="33" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="PlayTests">
+    <class name="Tests.BulletTests" coveredlines="33" coverablelines="66" totallines="71" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.DamagerTest" coveredlines="58" coverablelines="116" totallines="99" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.PlayMovementTest" coveredlines="56" coverablelines="112" totallines="95" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.ShooterDirectionsObjectsTests" coveredlines="61" coverablelines="122" totallines="106" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.ShooterPlayerObjectsTests" coveredlines="73" coverablelines="146" totallines="124" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="TestEdit">
+    <class name="Tests.DamagableTest" coveredlines="10" coverablelines="80" totallines="68" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.FollowMovementTest" coveredlines="0" coverablelines="88" totallines="81" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.LevelGenTest" coveredlines="0" coverablelines="180" totallines="142" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.LooperMovementTest" coveredlines="0" coverablelines="30" totallines="37" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.PlayerMovementTest" coveredlines="0" coverablelines="50" totallines="62" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.RandomMovementTest" coveredlines="0" coverablelines="118" totallines="115" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.ShooterFactoryTests" coveredlines="0" coverablelines="40" totallines="45" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5834501667177063318}
   - component: {fileID: 5834501667177063317}
   - component: {fileID: 5834501667177063322}
+  - component: {fileID: 6360142911538618174}
+  - component: {fileID: 93172589}
   m_Layer: 9
   m_Name: PotworekLoop
   m_TagString: Untagged
@@ -72,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1690417743
-  m_SortingLayer: -2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: d0f0bb7b0aae47846a42f0be578f602f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,8 +97,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7fcc206ed832154b84c38bec093272f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &5834501667177063318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,8 +109,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60fcec85e6fbcf0419ab6cba76294047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   speed: 3
   changeTime: 3
   directions:
@@ -163,3 +165,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.60468674, y: 0.6136589}
   m_EdgeRadius: 0
+--- !u!114 &6360142911538618174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834501667177063316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123a812296b6e884b8040f93d54059aa, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  bullet: {fileID: 5804944351264310358, guid: d587b911b95fd5b4a8c344ce89e87860, type: 3}
+  shootCooldown: 2
+  bulletSpeed: 8
+  directions:
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
+  - {x: -1, y: 0}
+  - {x: 1, y: 0}
+--- !u!114 &93172589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834501667177063316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1057b2c4fb9334fa785e178a048daa, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  maxHealth: 1
+  animator: {fileID: 0}

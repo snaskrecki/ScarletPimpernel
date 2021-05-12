@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7302934656451160723}
   - component: {fileID: 7302934656451160732}
   - component: {fileID: 3803826093894719982}
+  - component: {fileID: 4048538211295433682}
+  - component: {fileID: 153607594}
   m_Layer: 9
   m_Name: PotworekRandom
   m_TagString: Untagged
@@ -72,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1690417743
-  m_SortingLayer: -2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: d0f0bb7b0aae47846a42f0be578f602f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -165,3 +167,32 @@ MonoBehaviour:
   - {x: 0, y: -1}
   - {x: -1, y: 1}
   - {x: -1, y: -1}
+--- !u!114 &4048538211295433682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302934656451160722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cedbfbbe4caad428ed4706fc46258c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5804944351264310358, guid: d587b911b95fd5b4a8c344ce89e87860, type: 3}
+  shootCooldown: 4
+  bulletSpeed: 3
+--- !u!114 &153607594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302934656451160722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1057b2c4fb9334fa785e178a048daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  animator: {fileID: 0}
