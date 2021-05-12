@@ -7,7 +7,6 @@ public class MainCharacterController : MonoBehaviour
     // speed of character, should be about 3-10
     public float speed = 5;
 
-
     private Vector2 moveInput;
 
     private Rigidbody2D rigidBody;

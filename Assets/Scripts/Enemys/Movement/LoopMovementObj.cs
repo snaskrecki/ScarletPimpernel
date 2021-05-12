@@ -24,7 +24,6 @@ public class LoopMovementObj : EnemyMovementObject
 
     public Vector2 Move(float deltaTime)
     {
-        Debug.Log("move loop");
         timePassed += deltaTime;
         if (timePassed > changeTime)
         {

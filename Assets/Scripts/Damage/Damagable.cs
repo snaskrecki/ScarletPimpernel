@@ -33,6 +33,12 @@ public class Damagable : MonoBehaviour
         health = maxHealth;
     }
 
+    public void UpdateMaxHealth(int modifier)
+    {
+        maxHealth += modifier;
+        ResetHealth();
+    }
+
     public void Die()
     {
         GameObject.Destroy(gameObject);
