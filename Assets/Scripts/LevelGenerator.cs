@@ -13,7 +13,7 @@ public class LevelGenerator : MonoBehaviour
 	private const int DEFAULT_GRID_SIZE = 13;
 	private int DEFAULT_NUMBER_OF_ENEMYS = 4;
 	private int MAX_ENEMY_HEALTH = 2;
-	private int UPGRADE_LEVEL = 5;
+	private int UPGRADE_LEVEL = 5; // some statistics are not updated during each generation
 	private int level_number;
 
 	private const float WIDTH = 19.2F;
@@ -99,6 +99,7 @@ public class LevelGenerator : MonoBehaviour
 					InstantiateRoom(map_grid[x, y], x, y);
 				}
 			}
+			level_number++;
 	}
 
 	void InstantiateRoom(int room, int x, int y)
