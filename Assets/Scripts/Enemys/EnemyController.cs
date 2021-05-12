@@ -6,18 +6,21 @@ public class EnemyController : MonoBehaviour
 {
     EnemyMovementObject moover;
     Rigidbody2D body;
+    EnemyShootingObject shooter;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        moover = GetComponent<EnemyMovementAI>().GetMoover();
+        var player = GameObject.FindGameObjectWithTag("Player");
+        moover = GetComponent<EnemyMovementAI>().MakeMoover(player);
         body = GetComponent<Rigidbody2D>();
-        moover.Move(0);
+        shooter = GetComponent<EnemyShootingAI>().MakeShooter(player);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        shooter.ShootDecision(Time.deltaTime);
     }
 
     private void FixedUpdate()

@@ -13,13 +13,6 @@ public class RandomMovement : MonoBehaviour, EnemyMovementAI
                                     Vector2.right + Vector2.up, Vector2.right + Vector2.down,
                                     Vector2.zero};
 
-    RandomMovementObj moover;
-
-    void Awake()
-    {
-        moover = new RandomMovementObj(changeTime, speed, directions);
-    }
-
-    public EnemyMovementObject GetMoover() => moover;
+    public EnemyMovementObject MakeMoover(GameObject _) => new RandomMovementObj(changeTime, speed, directions);
 
 }
