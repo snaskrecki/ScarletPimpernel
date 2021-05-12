@@ -10,7 +10,8 @@ namespace Tests
     public class LevelGenTest
     {
 		private const int MAX_GRID_VAL = 31;
-        
+        private const int DOOR_ROOM = 1 << 6;
+		
 		[Test]
         public void LevelGenTestCorrectValuesInGrid()
         {
@@ -18,21 +19,24 @@ namespace Tests
 			const int side = 101;
             int[,] grid = LevelGenerator.GenerateGraph(n, side);
 			var start = new Tuple<int, int>(-1, -1);
+			int grid_val;
 			
 			for(int x = 0; x < side; x++)
 			{
 				for(int y = 0; y < side; y++)
 				{
-					Assert.IsTrue(grid[x, y] <= MAX_GRID_VAL);
+					grid_val = Math.Min(grid[x, y], grid[x, y] ^ DOOR_ROOM);
+					Assert.IsTrue(grid_val <= MAX_GRID_VAL);
 					
-					if(start.Item1 == -1 && grid[x, y] > 0)
+					if(start.Item1 == -1 && grid_val > 0)
 					{
 						start = new Tuple<int, int>(x, y);
 					}
 				}
 			}
 			
-			Assert.IsTrue(0 < grid[start.Item1, start.Item2] && grid[start.Item1, start.Item2] <= MAX_GRID_VAL);
+			grid_val = Math.Min(grid[start.Item1, start.Item2], grid[start.Item1, start.Item2] ^ DOOR_ROOM);
+			Assert.IsTrue(0 < grid_val && grid_val <= MAX_GRID_VAL);
         }
 		
 		int[] dx = new int[]{0, 1, 0, -1};
@@ -100,7 +104,7 @@ namespace Tests
         }
 		
 		[Test]
-        public void LevelGenTestCorrectDoors()
+        public void LevelGenTestCorrectRoomConnections()
         {
 			const int n = 85;
 			const int side = 137;
@@ -124,6 +128,29 @@ namespace Tests
 				}
 			}
         }
+		
+		[Test]
+		public void LevelGenTestExactlyOneDoorPerLevel()
+		{
+			const int n = 45;
+			const int side = 201;
+			int[,] grid = LevelGenerator.GenerateGraph(n, side);
+			bool foundDoor = false;
+			
+			for(int x = 0; x < side; x++)
+			{
+				for(int y = 0; y < side; y++)
+				{
+					if((grid[x, y] & DOOR_ROOM) != 0)
+					{
+						Assert.IsFalse(foundDoor);
+						foundDoor = true;
+					}
+				}
+			}
+			
+			Assert.IsTrue(foundDoor);
+		}
 		
 		[Test]
 		public void LevelGenTestInBounds()
