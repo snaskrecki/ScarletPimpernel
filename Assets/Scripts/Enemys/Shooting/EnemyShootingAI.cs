@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface EnemyShootingAI
 {
-    EnemyShootingObject MakeShooter(GameObject target);    
+    EnemyShootingObject MakeShooter(GameObject target);
 }

@@ -18,7 +18,7 @@ namespace Tests
         int testingMaxHealth = 5;
         int testingDamage = 1;
         int Big = 10000;
-        Vector2 damagableStartingPosition = new Vector2 (100, 0);
+        Vector2 damagableStartingPosition = new Vector2(100, 0);
         Vector2 damagerStartingPosition = new Vector2(0, 100);
 
         void SetupDamagable()

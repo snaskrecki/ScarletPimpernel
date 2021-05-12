@@ -9,7 +9,7 @@ public class Damager : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var damagable = collision.gameObject.GetComponent<Damagable>();
-        if(damagable != null)
+        if (damagable != null)
         {
             damagable.ChangeHealth(-damage);
         }

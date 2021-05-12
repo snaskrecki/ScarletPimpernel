@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IControllerInput
 {
-    float Vertical {get; }
+    float Vertical { get; }
     float Horizontal { get; }
     float GetTime { get; }
 }

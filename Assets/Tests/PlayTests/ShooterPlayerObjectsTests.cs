@@ -68,7 +68,7 @@ namespace Tests
             }
         }
 
-        
+
 
         /* In all test we have one bullet pre-spawned */
 

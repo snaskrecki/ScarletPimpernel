@@ -45,13 +45,13 @@ namespace Tests
         {
             GameObject.Destroy(enemyObject);
             var bullets = GameObject.FindObjectsOfType<EnemyBullet>();
-            foreach(var bullet in bullets)
+            foreach (var bullet in bullets)
             {
                 GameObject.Destroy(bullet);
             }
         }
 
-        
+
         /* In all test we have one bullet pre-spawned */
 
         [UnityTest]

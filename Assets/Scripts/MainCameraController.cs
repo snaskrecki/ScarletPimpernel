@@ -14,7 +14,7 @@ public class MainCameraController : MonoBehaviour
     }
     void Update()
     {
-        transform.position = new Vector3(player.position.x + offset.x, 
+        transform.position = new Vector3(player.position.x + offset.x,
             player.position.y + offset.y, offset.z);
     }
 }

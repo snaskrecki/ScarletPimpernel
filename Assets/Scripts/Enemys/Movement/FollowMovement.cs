@@ -8,7 +8,7 @@ public class FollowMovement : MonoBehaviour, EnemyMovementAI
 
     public float range;
 
-    public EnemyMovementObject MakeMoover(GameObject target) => 
+    public EnemyMovementObject MakeMoover(GameObject target) =>
         new FollowMovementObj(speed, range, this.transform, target.transform);
 
 }

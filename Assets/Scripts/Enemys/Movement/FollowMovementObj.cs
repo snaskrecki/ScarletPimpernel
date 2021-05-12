@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowMovementObj : EnemyMovementObject
 {
-   
+
     private float speed;
 
     private float rangeToChasePlayer;
@@ -37,7 +37,7 @@ public class FollowMovementObj : EnemyMovementObject
         {
             moveDirection = playerToChase.position - myself.position;
         }
-        
+
 
         moveDirection.Normalize();
 

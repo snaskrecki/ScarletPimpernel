@@ -11,7 +11,7 @@ public class ShootDirectionsObject : EnemyShootingObject
     Transform me;
     Vector2[] directions;
 
-    public ShootDirectionsObject(GameObject bulletPrefab, float cooldown, float bulletSpeed,  Transform me, Vector2[] directions)
+    public ShootDirectionsObject(GameObject bulletPrefab, float cooldown, float bulletSpeed, Transform me, Vector2[] directions)
     {
         this.cooldown = cooldown;
         this.bulletPrefab = bulletPrefab;
@@ -27,7 +27,7 @@ public class ShootDirectionsObject : EnemyShootingObject
         if (timePassed > cooldown)
         {
             timePassed = 0;
-            foreach(var direction in directions)
+            foreach (var direction in directions)
             {
                 var bullet = GameObject.Instantiate(bulletPrefab, me.position + 0.2f * Vector3.up, Quaternion.identity);
                 bullet.GetComponent<EnemyBullet>().Launch(direction, bulletSpeed);

@@ -8,7 +8,7 @@ namespace Tests
 {
     public class LooperMovementTest
     {
-		// A Test behaves as an ordinary method
+        // A Test behaves as an ordinary method
         [Test]
         public void LooperMovementTestVectorUp()
         {

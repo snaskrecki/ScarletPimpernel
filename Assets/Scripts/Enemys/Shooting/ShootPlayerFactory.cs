@@ -9,7 +9,7 @@ public class ShootPlayerFactory : MonoBehaviour, EnemyShootingAI
     public float shootCooldown;
     public float bulletSpeed;
 
-    public EnemyShootingObject MakeShooter(GameObject target) => 
+    public EnemyShootingObject MakeShooter(GameObject target) =>
         new ShootPlayerObject(bullet, shootCooldown, this.transform, target.transform, bulletSpeed);
 
 }

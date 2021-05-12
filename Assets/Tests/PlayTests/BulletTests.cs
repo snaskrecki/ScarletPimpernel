@@ -11,7 +11,7 @@ namespace Tests
         GameObject bulletObject;
         Rigidbody2D bulletBody;
         EnemyBullet bullet;
-        
+
         [SetUp]
         public void Init()
         {
