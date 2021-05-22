@@ -9,8 +9,9 @@ public class ShootPlayerObject : EnemyShootingObject
     GameObject bulletPrefab;
     Transform me, target;
     float bulletSpeed;
+    Animator animator;
 
-    public ShootPlayerObject(GameObject bulletPrefab, float cooldown, Transform me, Transform target, float bulletSpeed)
+    public ShootPlayerObject(GameObject bulletPrefab, float cooldown, Transform me, Transform target, float bulletSpeed, Animator animator)
     {
         this.cooldown = cooldown;
         this.bulletPrefab = bulletPrefab;
@@ -18,6 +19,7 @@ public class ShootPlayerObject : EnemyShootingObject
         this.target = target;
         this.timePassed = 0;
         this.bulletSpeed = bulletSpeed;
+        this.animator = animator;
     }
 
     public void ShootDecision(float deltaTime)
@@ -25,6 +27,10 @@ public class ShootPlayerObject : EnemyShootingObject
         timePassed += deltaTime;
         if (timePassed > cooldown)
         {
+            if (animator != null)
+            {
+                animator.SetTrigger("Attack");
+            }
             timePassed = 0;
             var bullet = GameObject.Instantiate(bulletPrefab, me.position + 0.2f * Vector3.up, Quaternion.identity);
             bullet.GetComponent<EnemyBullet>().Launch(target.position - me.position, bulletSpeed);
