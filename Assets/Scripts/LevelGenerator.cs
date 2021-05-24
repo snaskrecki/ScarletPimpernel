@@ -70,6 +70,7 @@ public class LevelGenerator : MonoBehaviour
         player.GetComponent<MainCharacterController>().speed += 0.1F;
         player.GetComponent<Damagable>().UpdateMaxHealth(1);
         MAX_ENEMY_HEALTH += 1;
+		
         if (level_number % UPGRADE_LEVEL == 0)
         {
             DEFAULT_NUMBER_OF_ENEMYS += 2;
@@ -146,15 +147,29 @@ public class LevelGenerator : MonoBehaviour
 
         for (int i = 0; i < current_number_of_objects; i++)
         {
-            generateNewObject(pos);
+            generateNewObject(RandomizePosition(pos));
         }
     }
-
+	
     // bit masks representing types of rooms
 
     static int[] dx = new int[] { 0, 1, 0, -1 };
     static int[] dy = new int[] { 1, 0, -1, 0 };
     const int DIRECTIONS = 4;
+
+	Vector3 RandomizePosition(Vector3 pos)
+	{
+		int r = UnityEngine.Random.Range(0, DIRECTIONS - 1);
+		float newX = pos.x + ((float) dx[r] * WIDTH) / 4;
+		float newY = pos.y + ((float) dy[r] * HEIGHT) / 4;
+		
+		r = UnityEngine.Random.Range(0, DIRECTIONS - 1);
+		int eps = UnityEngine.Random.Range(0, (int) HEIGHT / 3);
+		newX += dx[r] * eps;
+		newY += dy[r] * eps;
+		
+		return new Vector3(newX, newY);
+	}
 
     // bits representing doors
     // 2^direction gives correct door
