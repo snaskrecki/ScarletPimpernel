@@ -1,0 +1,10 @@
+Sprint 5
+ > Dźwięki
+	Dodanie muzyki i dźwięków gameplay-u np podnoszenie przedmiotów, chodzenie, atak, śmierć przeciwnika
+ > System rozwoju postaci
+	Umożliwienie graczowi zwiększenia wybranej statystyki (atak, życie, szybkość) po przejściu planszy,
+	powinien to robić z poziomu pojawiającego się po przejściu menu
+ > Memu
+	Możliwość wejścia do gry z poziomu menu, zapauzowania i wyjścia z gry, wyboru poziomu głośności
+ > Fabuła
+	Dodanie książek i plansz opisujących historię świata gry
