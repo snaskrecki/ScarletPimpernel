@@ -8,6 +8,7 @@ TagManager:
   - Rooms
   - Enemys
   - Door
+  - Objects
   layers:
   - Default
   - TransparentFX
@@ -51,14 +52,14 @@ TagManager:
   - name: Units
     uniqueID: 3094687163
     locked: 0
+  - name: Object
+    uniqueID: 2951310943
+    locked: 0
   - name: Player
     uniqueID: 24524831
     locked: 0
   - name: Enemy
     uniqueID: 1690417743
-    locked: 0
-  - name: Object
-    uniqueID: 2951310943
     locked: 0
   - name: Bullets
     uniqueID: 3517429551
