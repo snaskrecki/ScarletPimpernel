@@ -12,12 +12,29 @@ namespace Tests
     {
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
+
+        GameObject playerObject;
+        MainCharacterController player;
+
+        [TearDown]
+        public void Cleanup()
+        {
+            GameObject.Destroy(playerObject);
+        }
+
+        [SetUp]
+        public void Prepare()
+        {
+            playerObject = new GameObject();
+            playerObject.AddComponent<Rigidbody2D>();
+            playerObject.AddComponent<Animator>();
+            player = playerObject.AddComponent<MainCharacterController>();
+        }
+
+
         [UnityTest]
         public IEnumerator Test_Horizontal_Movement()
         {
-            var gameObject = new GameObject();
-            gameObject.AddComponent<Rigidbody2D>();
-            var player = gameObject.AddComponent<MainCharacterController>();
 
             //SETUP
             player.controllerInput = Substitute.For<IControllerInput>();
@@ -36,9 +53,6 @@ namespace Tests
         [UnityTest]
         public IEnumerator Test_Vertical_Movement()
         {
-            var gameObject = new GameObject();
-            gameObject.AddComponent<Rigidbody2D>();
-            var player = gameObject.AddComponent<MainCharacterController>();
 
             //SETUP
             player.controllerInput = Substitute.For<IControllerInput>();
@@ -57,9 +71,6 @@ namespace Tests
         [UnityTest]
         public IEnumerator Test_Composite_Movement()
         {
-            var gameObject = new GameObject();
-            gameObject.AddComponent<Rigidbody2D>();
-            var player = gameObject.AddComponent<MainCharacterController>();
 
             //SETUP
             player.controllerInput = Substitute.For<IControllerInput>();
@@ -78,9 +89,6 @@ namespace Tests
         [UnityTest]
         public IEnumerator Test_Default_MovementController()
         {
-            var gameObject = new GameObject();
-            gameObject.AddComponent<Rigidbody2D>();
-            var player = gameObject.AddComponent<MainCharacterController>();
 
             //SETUP
             player.speed = 4f;

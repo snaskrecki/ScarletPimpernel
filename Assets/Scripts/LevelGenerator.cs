@@ -8,10 +8,12 @@ public class LevelGenerator : MonoBehaviour
     public static bool needGeneration;
     private static RoomTemplates templates;
     private static EnemysTemplates enemys_templates;
+    private static ObjectTemplates objects_templates;
     private static int[,] map_grid;
     private const int DEFAULT_NUMBER_OF_ROOMS = 8;
     private const int DEFAULT_GRID_SIZE = 13;
-    private int DEFAULT_NUMBER_OF_ENEMYS = 4;
+    private int DEFAULT_NUMBER_OF_ENEMYS = 3;
+    private int DEFAULT_NUMBER_OF_OBJECTS = 4;
     private int MAX_ENEMY_HEALTH = 2;
     private int UPGRADE_LEVEL = 5; // some statistics are not updated during each generation
     private int level_number;
@@ -22,7 +24,7 @@ public class LevelGenerator : MonoBehaviour
 
     private static Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
 
-    private ArrayList objList;
+    private ArrayList objectsList;
     private ArrayList enemysList;
     private GameObject door;
     private GameObject player;
@@ -34,9 +36,10 @@ public class LevelGenerator : MonoBehaviour
 
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         enemys_templates = GameObject.FindGameObjectWithTag("Enemys").GetComponent<EnemysTemplates>();
+        objects_templates = GameObject.FindGameObjectWithTag("Objects").GetComponent<ObjectTemplates>();
         door = GameObject.FindGameObjectWithTag("Door");
         needGeneration = false;
-        objList = new ArrayList();
+        objectsList = new ArrayList();
         enemysList = new ArrayList();
 
         Generate();
@@ -55,18 +58,19 @@ public class LevelGenerator : MonoBehaviour
 
         enemysList.Clear();
 
-        foreach (UnityEngine.Object obj in objList)
+        foreach (UnityEngine.Object obj in objectsList)
         {
             Destroy(obj);
         }
 
-        objList.Clear();
+        objectsList.Clear();
 
         // change statistics chosen by by player in sprint 5
         // currently example statistic changes
-        player.GetComponent<MainCharacterController>().speed += 0.1F;
+        player.GetComponent<MainCharacterController>().basic_speed += 0.1F;
         player.GetComponent<Damagable>().UpdateMaxHealth(1);
         MAX_ENEMY_HEALTH += 1;
+
         if (level_number % UPGRADE_LEVEL == 0)
         {
             DEFAULT_NUMBER_OF_ENEMYS += 2;
@@ -77,14 +81,33 @@ public class LevelGenerator : MonoBehaviour
         needGeneration = false;
     }
 
+    private Vector3 newRandomPosition(Vector3 zero_position)
+    {
+      float percent = 0.9f;
+      // we return a position inside the rooom; we exclude 10% of each dimension in order to avoid walls
+      return new Vector3(zero_position[0] + UnityEngine.Random.Range(percent * (WIDTH / (-2)), percent * (WIDTH / 2)),
+      zero_position[1] + UnityEngine.Random.Range(percent * (HEIGHT / (-2)), percent * (HEIGHT / 2)), zero_position[2]);
+    }
+
     void generateNewEnemy(Vector3 zero_position)
     {
         int index = UnityEngine.Random.Range(0, enemys_templates.allEnemys.Length);
-        Vector3 new_pos = new Vector3(zero_position[0] + UnityEngine.Random.Range(0, WIDTH / 2),
-        zero_position[1] + UnityEngine.Random.Range(0, HEIGHT / 2), zero_position[2]);
+        Vector3 new_pos = newRandomPosition(zero_position);
+        Debug.Log(new_pos);
         UnityEngine.GameObject new_enemy = Instantiate(enemys_templates.allEnemys[index], zero_position, Quaternion.identity);
         new_enemy.GetComponent<Damagable>().UpdateMaxHealth(UnityEngine.Random.Range(MAX_ENEMY_HEALTH / 2, MAX_ENEMY_HEALTH));
         enemysList.Add(new_enemy);
+    }
+
+    void generateNewObject(Vector3 zero_position)
+    {
+        int index = UnityEngine.Random.Range(0, objects_templates.allObjects.Length);
+
+        Vector3 new_pos =  newRandomPosition(zero_position);
+        Debug.Log("Object");
+        Debug.Log(new_pos);
+        UnityEngine.GameObject new_object = Instantiate(objects_templates.allObjects[index], zero_position, Quaternion.identity);
+        objectsList.Add(new_object);
     }
 
     void Generate()
@@ -108,6 +131,7 @@ public class LevelGenerator : MonoBehaviour
 
         int type = room - ROOM - 1;
         int current_number_of_enemys = UnityEngine.Random.Range(1, DEFAULT_NUMBER_OF_ENEMYS);
+        int current_number_of_objects = UnityEngine.Random.Range(1, DEFAULT_NUMBER_OF_OBJECTS);
 
         var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
 
@@ -121,11 +145,16 @@ public class LevelGenerator : MonoBehaviour
         }
 
         UnityEngine.Object obj = Instantiate(templates.allRooms[type], pos, Quaternion.identity);
-        objList.Add(obj);
+        objectsList.Add(obj);
 
         for (int i = 0; i < current_number_of_enemys; i++)
         {
             generateNewEnemy(pos);
+        }
+
+        for (int i = 0; i < current_number_of_objects; i++)
+        {
+            generateNewObject(RandomizePosition(pos));
         }
     }
 
@@ -134,6 +163,20 @@ public class LevelGenerator : MonoBehaviour
     static int[] dx = new int[] { 0, 1, 0, -1 };
     static int[] dy = new int[] { 1, 0, -1, 0 };
     const int DIRECTIONS = 4;
+
+	Vector3 RandomizePosition(Vector3 pos)
+	{
+		int r = UnityEngine.Random.Range(0, DIRECTIONS - 1);
+		float newX = pos.x + ((float) dx[r] * WIDTH) / 4;
+		float newY = pos.y + ((float) dy[r] * HEIGHT) / 4;
+
+		r = UnityEngine.Random.Range(0, DIRECTIONS - 1);
+		int eps = UnityEngine.Random.Range(0, (int) HEIGHT / 3);
+		newX += dx[r] * eps;
+		newY += dy[r] * eps;
+
+		return new Vector3(newX, newY);
+	}
 
     // bits representing doors
     // 2^direction gives correct door

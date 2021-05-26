@@ -10,8 +10,9 @@ public class ShootDirectionsObject : EnemyShootingObject
     float bulletSpeed;
     Transform me;
     Vector2[] directions;
+    Animator animator;
 
-    public ShootDirectionsObject(GameObject bulletPrefab, float cooldown, float bulletSpeed, Transform me, Vector2[] directions)
+    public ShootDirectionsObject(GameObject bulletPrefab, float cooldown, float bulletSpeed, Transform me, Vector2[] directions, Animator animator)
     {
         this.cooldown = cooldown;
         this.bulletPrefab = bulletPrefab;
@@ -19,6 +20,7 @@ public class ShootDirectionsObject : EnemyShootingObject
         this.directions = directions;
         timePassed = 0;
         this.bulletSpeed = bulletSpeed;
+        this.animator = animator;
     }
 
     public void ShootDecision(float deltaTime)
@@ -26,6 +28,10 @@ public class ShootDirectionsObject : EnemyShootingObject
         timePassed += deltaTime;
         if (timePassed > cooldown)
         {
+            if (animator != null)
+            {
+                animator.SetTrigger("Attack");
+            }
             timePassed = 0;
             foreach (var direction in directions)
             {
