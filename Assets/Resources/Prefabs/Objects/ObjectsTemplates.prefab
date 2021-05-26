@@ -16,6 +16,8 @@ MonoBehaviour:
   - {fileID: 649762490160441819, guid: 11a84f9e42b042d49b1104654daa45ce, type: 3}
   - {fileID: 2783495120861902361, guid: 2358e4123791c5441af96a6b246e5e03, type: 3}
   - {fileID: 5341679756481303775, guid: e2b4cc68cac9ba040bbf4ea0472ba08d, type: 3}
+  - {fileID: 5370235408243630931, guid: 8bb803a782e4e1c4ebe98968f5f8a964, type: 3}
+  - {fileID: 5933153665870195522, guid: f15a40793149016469bb2b4233629ed8, type: 3}
 --- !u!1001 &588821912352766700
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class MainCharacterController : MonoBehaviour
 {
     // speed of character, should be about 3-10
     public float speed = 5;
+    public float basic_speed = 5;
     public float speed_modifier = 0;
     public int max_modifier_timer = 300; // number of frames modifier works
     public int current_modifier_timer = 0;
@@ -43,11 +44,11 @@ public class MainCharacterController : MonoBehaviour
             moveInput = Vector2.zero;
         } else {
             if (current_modifier_timer == max_modifier_timer) {
-              speed += speed_modifier;
+              speed = basic_speed * (1 + speed_modifier);
             }
             else {
-              if (current_modifier_timer == 0 && speed_modifier != 0) {
-                speed -= speed_modifier;
+              if (current_modifier_timer == 0) {
+                speed = basic_speed;
                 speed_modifier = 0;
               }
               else

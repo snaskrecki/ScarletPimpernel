@@ -6,7 +6,7 @@ public class ModifySpeed : MonoBehaviour
 {
   private Rigidbody2D body;
   public Transform ObjectPosition;
-  public int speed_modifier;
+  public float speed_modifier;
 
   void Start()
   {
