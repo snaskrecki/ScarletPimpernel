@@ -1,14 +1,18 @@
  jobs: 
   build: 
     runs-on: ubuntu-latest
+    container: gableroux/unity3d:2019.4.22f1
     steps: 
-      - 
+      - name: checkout
         uses: actions/checkout@v2
-      - 
-        name: "Test and create report"
+
+      - name: activate unity
+        run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -manualLicenseFile ${{secrets.UNITY_LICENSE}} || exit 0
+       
+      - name: "Test and create report"
         run: |-
-            Unity.exe -projectPath . -batchmode -testPlatform editmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath ./CodeCoverage -coverageOptions enableCyclomaticComplexity;assemblyFilters:-UnityEditor*;pathFilters:-*Packages* &&
-            Unity.exe -projectPath . -batchmode -testPlatform playmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath ./CodeCoverage -coverageOptions enableCyclomaticComplexity;assemblyFilters:-UnityEditor*;pathFilters:-*Packages* &&
-            Unity.exe -projectPath . -batchmode -debugCodeOptimization -enableCodeCoverage -coverageResultsPath ./CodeCoverage -coverageOptions generateHtmlReport;generateBadgeReport -quit
+            /opt/Unity/editor/Unity -projectPath . -batchmode -testPlatform editmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath ./CodeCoverage -coverageOptions enableCyclomaticComplexity;assemblyFilters:-UnityEditor*;pathFilters:-*Packages* &&
+            /opt/Unity/editor/Unity -projectPath . -batchmode -testPlatform playmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath ./CodeCoverage -coverageOptions enableCyclomaticComplexity;assemblyFilters:-UnityEditor*;pathFilters:-*Packages* &&
+            /opt/Unity/editor/Unity -projectPath . -batchmode -debugCodeOptimization -enableCodeCoverage -coverageResultsPath ./CodeCoverage -coverageOptions generateHtmlReport;generateBadgeReport -quit
  name: "Generate report"
  on: workflow_dispatch
