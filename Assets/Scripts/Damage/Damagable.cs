@@ -7,15 +7,24 @@ public class Damagable : MonoBehaviour
     public int maxHealth;
     int health;
     public Animator animator;
+    public HealthBar healthBar;
 
     private void Awake()
     {
         health = maxHealth;
     }
 
+    void NotifyHealthBar()
+    {
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(health, maxHealth);
+        }
+    }
+
     public void ChangeHealth(int amount)
     {
-        if (animator != null)
+        if (animator != null && amount < 0)
         {
             animator.SetTrigger("Hurt");
         }
@@ -24,6 +33,8 @@ public class Damagable : MonoBehaviour
         {
             StartCoroutine(Die());
         }
+
+        NotifyHealthBar();
     }
 
     public int GetHealth() => health;
@@ -31,6 +42,8 @@ public class Damagable : MonoBehaviour
     public void ResetHealth()
     {
         health = maxHealth;
+
+        NotifyHealthBar();
     }
 
     public void UpdateMaxHealth(int modifier)
