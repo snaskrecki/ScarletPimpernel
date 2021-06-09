@@ -95,6 +95,11 @@ public class MainCharacterController : MonoBehaviour
         anim.SetFloat("Speed", moveInput.magnitude);
     }
 
+    public void IncreaseSpeed(float speed)
+    {
+        basic_speed += speed;
+    }
+
     public Vector3 SetFlip(Vector3 vect, float x)
     {
         if (x < 0)

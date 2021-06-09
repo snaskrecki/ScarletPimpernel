@@ -9,6 +9,7 @@ TagManager:
   - Enemys
   - Door
   - Objects
+  - StatIncreaseMenu
   layers:
   - Default
   - TransparentFX
