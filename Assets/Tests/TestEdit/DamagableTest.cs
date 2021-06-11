@@ -52,5 +52,16 @@ namespace Tests
             damagable.ChangeHealth(Big);
             Assert.AreEqual(testingMaxHealth, damagable.GetHealth());
         }
+
+        [Test]
+        public void DamagableTestUpdateMaxHealth()
+        {
+            var g = new GameObject();
+            var damagable = g.AddComponent<Damagable>();
+            damagable.maxHealth = testingMaxHealth;
+            damagable.ResetHealth();
+            damagable.UpdateMaxHealth(Big);
+            Assert.AreEqual(testingMaxHealth + Big, damagable.GetHealth());
+        }
     }
 }

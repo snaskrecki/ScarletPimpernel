@@ -38,6 +38,10 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public void IncreaseDamage(int dam)
+    {
+        attackDamage += dam;
+    }
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)

@@ -28,16 +28,24 @@ public class LevelGenerator : MonoBehaviour
     private ArrayList enemysList;
     private GameObject door;
     private GameObject player;
+    private StatIncreaseMenu statIncreaseMenu;
 
-    // Start is called before the first frame update
-    void Start()
+    void FindObjects()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         enemys_templates = GameObject.FindGameObjectWithTag("Enemys").GetComponent<EnemysTemplates>();
         objects_templates = GameObject.FindGameObjectWithTag("Objects").GetComponent<ObjectTemplates>();
         door = GameObject.FindGameObjectWithTag("Door");
+        statIncreaseMenu = GameObject.FindGameObjectWithTag("StatIncreaseMenu").GetComponent<StatIncreaseMenu>();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        FindObjects();
+
         needGeneration = false;
         objectsList = new ArrayList();
         enemysList = new ArrayList();
@@ -65,10 +73,6 @@ public class LevelGenerator : MonoBehaviour
 
         objectsList.Clear();
 
-        // change statistics chosen by by player in sprint 5
-        // currently example statistic changes
-        player.GetComponent<MainCharacterController>().basic_speed += 0.1F;
-        player.GetComponent<Damagable>().UpdateMaxHealth(1);
         MAX_ENEMY_HEALTH += 1;
 
         if (level_number % UPGRADE_LEVEL == 0)
@@ -77,6 +81,7 @@ public class LevelGenerator : MonoBehaviour
             player.GetComponent<PlayerCombat>().attackDamage++;
         }
 
+        statIncreaseMenu.Pause();
         Generate();
         needGeneration = false;
     }
