@@ -87,6 +87,25 @@ namespace Tests
         }
 
         [UnityTest]
+        public IEnumerator Test_Speed_Change()
+        {
+
+            //SETUP
+            player.controllerInput = Substitute.For<IControllerInput>();
+            player.speed = 4f;
+            player.IncreaseSpeed(2f);
+            player.controllerInput.Horizontal.Returns(0f);
+            player.controllerInput.Vertical.Returns(1f);
+            player.controllerInput.GetTime.Returns(1f);
+
+            yield return null;
+            yield return new WaitForFixedUpdate();
+            Vector2 posEnd = player.transform.position;
+            Assert.Greater(posEnd.y, 5.9f);
+            Assert.Less(Mathf.Abs(posEnd.x), 0.1f);
+        }
+
+        [UnityTest]
         public IEnumerator Test_Default_MovementController()
         {
 
