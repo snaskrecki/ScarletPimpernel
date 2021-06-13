@@ -10,6 +10,8 @@ TagManager:
   - Door
   - Objects
   - StatIncreaseMenu
+  - Room
+  - Enemy
   layers:
   - Default
   - TransparentFX
