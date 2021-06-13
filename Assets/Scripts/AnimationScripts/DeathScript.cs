@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathScript : StateMachineBehaviour
 {
@@ -23,6 +25,7 @@ public class DeathScript : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         GameObject.Destroy(player);
+        // UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

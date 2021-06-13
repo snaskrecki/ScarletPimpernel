@@ -26,4 +26,9 @@ public class StartMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void mainMenuButton()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
 }

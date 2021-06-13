@@ -116,8 +116,9 @@ public class MainCharacterController : MonoBehaviour
 
     public void Die()
     {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         isDead = true;
-        rigidBody.simulated = false;
+        // rigidBody.simulated = false;
     }
 
     public Vector2 CalculateMovement(Vector2 coords, float speed, float time)
