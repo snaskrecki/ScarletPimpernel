@@ -31,7 +31,7 @@ public class Damagable : MonoBehaviour
         health = Mathf.Clamp(health + amount, 0, maxHealth);
         if (health <= 0)
         {
-            StartCoroutine(Die());
+            Die();
         }
 
         NotifyHealthBar();
@@ -52,15 +52,14 @@ public class Damagable : MonoBehaviour
         ResetHealth();
     }
 
-    public IEnumerator Die()
+    public void Die()
     {
         if (animator != null)
         {
             animator.SetBool("IsDead", true);
-            yield return new WaitForSeconds(1);
+        } else {
+            GameObject.Destroy(gameObject);
         }
-        GameObject.Destroy(gameObject);
-        // TODO show Game Over scene in next sprint.
-        //Application.Quit();
+        
     }
 }
