@@ -148,9 +148,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137617670}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93fd7dba8937e7b4db7a6efe709c9f43, type: 3}
+  m_Script: {fileID: 11500000, guid: 04dac0bceaeb38e48970faa5f1be99d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &137617672
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e418b4298577bd4b9d4abf6d6be85ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: abcfbf91a09234c4c9c1244676bdef08, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 137617671}
+      - m_Target: {fileID: 0}
         m_MethodName: mainMenuButton
         m_Mode: 1
         m_Arguments:

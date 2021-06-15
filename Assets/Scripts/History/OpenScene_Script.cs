@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class History1_Script : MonoBehaviour
+//opening scene
+public class OpenScene_Script : MonoBehaviour
 {
     void prepare()
     {
@@ -14,7 +15,6 @@ public class History1_Script : MonoBehaviour
     {
       //undo changes
 
-      History.next_Scene = true;
     }
 
 

@@ -12,11 +12,12 @@ public class LevelGenerator : MonoBehaviour
     private static int[,] map_grid;
     private const int DEFAULT_NUMBER_OF_ROOMS = 8;
     private const int DEFAULT_GRID_SIZE = 13;
-    private int DEFAULT_NUMBER_OF_ENEMYS = 3;
-    private int DEFAULT_NUMBER_OF_OBJECTS = 4;
+    public static int DEFAULT_NUMBER_OF_ENEMYS = 3;
+    public static int DEFAULT_NUMBER_OF_OBJECTS = 4;
     private int MAX_ENEMY_HEALTH = 2;
     private int UPGRADE_LEVEL = 5; // some statistics are not updated during each generation
     private int level_number;
+    public static int enemyList_length;
 
     private const float WIDTH = 19.2F;
     private const float HEIGHT = 10.8F;
@@ -38,6 +39,7 @@ public class LevelGenerator : MonoBehaviour
         objects_templates = GameObject.FindGameObjectWithTag("Objects").GetComponent<ObjectTemplates>();
         door = GameObject.FindGameObjectWithTag("Door");
         statIncreaseMenu = GameObject.FindGameObjectWithTag("StatIncreaseMenu").GetComponent<StatIncreaseMenu>();
+        enemyList_length = enemys_templates.allEnemys.Length;
     }
 
     // Start is called before the first frame update
@@ -78,6 +80,7 @@ public class LevelGenerator : MonoBehaviour
         if (level_number % UPGRADE_LEVEL == 0)
         {
             DEFAULT_NUMBER_OF_ENEMYS += 2;
+            DEFAULT_NUMBER_OF_OBJECTS += 2;
             player.GetComponent<PlayerCombat>().attackDamage++;
         }
 
@@ -96,7 +99,7 @@ public class LevelGenerator : MonoBehaviour
 
     void generateNewEnemy(Vector3 zero_position)
     {
-        int index = UnityEngine.Random.Range(0, enemys_templates.allEnemys.Length);
+        int index = UnityEngine.Random.Range(0, enemyList_length);
         Vector3 new_pos = newRandomPosition(zero_position);
         Debug.Log(new_pos);
         UnityEngine.GameObject new_enemy = Instantiate(enemys_templates.allEnemys[index], zero_position, Quaternion.identity);

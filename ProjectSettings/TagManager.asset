@@ -10,6 +10,9 @@ TagManager:
   - Door
   - Objects
   - StatIncreaseMenu
+  - EnemyFollow
+  - EnemyLoop
+  - EnemyRandom
   layers:
   - Default
   - TransparentFX

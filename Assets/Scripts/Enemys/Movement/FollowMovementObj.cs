@@ -5,7 +5,8 @@ using UnityEngine;
 public class FollowMovementObj : EnemyMovementObject
 {
 
-    private float speed;
+    public float speed;
+    public static float modifier = 0;
 
     private float rangeToChasePlayer;
 
@@ -41,9 +42,6 @@ public class FollowMovementObj : EnemyMovementObject
 
         moveDirection.Normalize();
 
-        return moveDirection * speed;
+        return moveDirection * (speed + modifier);
     }
 }
-
-
-

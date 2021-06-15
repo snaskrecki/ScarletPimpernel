@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 855581477857029613}
   m_Layer: 9
   m_Name: PotworekFollow
-  m_TagString: Untagged
+  m_TagString: EnemyFollow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1690417743
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 4723107735738678597, guid: 6fc66c021eec74942b4e71a3fde4dc04,
     type: 3}
@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   animator: {fileID: 855581477857029613}
+  healthBar: {fileID: 0}
 --- !u!95 &855581477857029613
 Animator:
   serializedVersion: 3
