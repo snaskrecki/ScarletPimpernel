@@ -5,16 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static bool gameIsPaused = false;
+    public GameObject pauseMenu;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameIsPaused)
+                Resume();
+            else
+                Pause();
+        }
+    }
+
+    private void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+    }
+
+    private void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        gameIsPaused = true;
     }
 
     public void playGameButton()
@@ -30,5 +46,12 @@ public class StartMenu : MonoBehaviour
     public void mainMenuButton()
     {
         SceneManager.LoadScene("StartMenu");
+    }
+
+    public void resumeButton()
+    {
+        gameIsPaused = false;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

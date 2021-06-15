@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>14.06.2021 - 13:36:54</Generatedon>
+    <Generatedon>15.06.2021 - 23:13:31</Generatedon>
     <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
     <Assemblies>4</Assemblies>
     <Classes>45</Classes>
     <Files>45</Files>
-    <Coveredlines>950</Coveredlines>
-    <Uncoveredlines>262</Uncoveredlines>
-    <Coverablelines>1212</Coverablelines>
-    <Totallines>2415</Totallines>
-    <Linecoverage>78.3</Linecoverage>
+    <Coveredlines>949</Coveredlines>
+    <Uncoveredlines>282</Uncoveredlines>
+    <Coverablelines>1231</Coverablelines>
+    <Totallines>2419</Totallines>
+    <Linecoverage>77</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
   </Summary>
   <Coverage>
-    <Assembly name="AllScripts" classes="30" coverage="53.9" coveredlines="302" coverablelines="560" totallines="1202" branchcoverage="" coveredbranches="0" totalbranches="0">
+    <Assembly name="AllScripts" classes="30" coverage="51.9" coveredlines="301" coverablelines="579" totallines="1206" branchcoverage="" coveredbranches="0" totalbranches="0">
       <Class name="ControllerInput" coverage="100" coveredlines="3" coverablelines="3" totallines="8" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Damagable" coverage="92.1" coveredlines="35" coverablelines="38" totallines="65" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Damager" coverage="100" coveredlines="7" coverablelines="7" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="DeathScript" coverage="100" coveredlines="10" coverablelines="10" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="DeathScript" coverage="100" coveredlines="10" coverablelines="10" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Destroyer" coverage="0" coveredlines="0" coverablelines="6" totallines="14" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="DestroyOnExit" coverage="0" coveredlines="0" coverablelines="4" totallines="12" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="DestroyOnExit" coverage="0" coveredlines="0" coverablelines="3" totallines="11" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="Door" coverage="0" coveredlines="0" coverablelines="10" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="EmptyRoom" coverage="0" coveredlines="0" coverablelines="3" totallines="11" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="EnemyBullet" coverage="50" coveredlines="6" coverablelines="12" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" />
@@ -29,11 +29,11 @@
       <Class name="FollowMovement" coverage="0" coveredlines="0" coverablelines="1" totallines="14" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="FollowMovementObj" coverage="100" coveredlines="21" coverablelines="21" totallines="49" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="HealthBar" coverage="0" coveredlines="0" coverablelines="10" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="LevelGenerator" coverage="35.3" coveredlines="59" coverablelines="167" totallines="312" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="LevelGenerator" coverage="34.7" coveredlines="58" coverablelines="167" totallines="312" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="LoopMovement" coverage="0" coveredlines="0" coverablelines="2" totallines="15" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="LoopMovementObj" coverage="100" coveredlines="15" coverablelines="15" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="MainCameraController" coverage="0" coveredlines="0" coverablelines="9" totallines="22" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="MainCharacterController" coverage="84.8" coveredlines="67" coverablelines="79" totallines="130" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="MainCharacterController" coverage="84.8" coveredlines="67" coverablelines="79" totallines="129" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="ModifyHealth" coverage="0" coveredlines="0" coverablelines="12" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="ModifySpeed" coverage="0" coveredlines="0" coverablelines="13" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="PlayerCombat" coverage="33.3" coveredlines="10" coverablelines="30" totallines="52" branchcoverage="" coveredbranches="0" totalbranches="0" />
@@ -43,7 +43,7 @@
       <Class name="ShootDirectionsObject" coverage="88.4" coveredlines="23" coverablelines="26" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="ShootPlayerFactory" coverage="100" coveredlines="1" coverablelines="1" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="ShootPlayerObject" coverage="86.9" coveredlines="20" coverablelines="23" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" />
-      <Class name="StartMenu" coverage="30.7" coveredlines="4" coverablelines="13" totallines="34" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="StartMenu" coverage="12.1" coveredlines="4" coverablelines="33" totallines="57" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="StatDisplay" coverage="0" coveredlines="0" coverablelines="6" totallines="21" branchcoverage="" coveredbranches="0" totalbranches="0" />
       <Class name="StatIncreaseMenu" coverage="100" coveredlines="8" coverablelines="8" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" />
     </Assembly>

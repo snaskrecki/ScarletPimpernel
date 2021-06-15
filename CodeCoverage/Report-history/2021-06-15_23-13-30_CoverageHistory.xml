@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2021-06-15_23-13-30" tag="">
+  <assembly name="AllScripts">
+    <class name="ControllerInput" coveredlines="3" coverablelines="3" totallines="8" coveredbranches="0" totalbranches="0" />
+    <class name="Damagable" coveredlines="35" coverablelines="38" totallines="65" coveredbranches="0" totalbranches="0" />
+    <class name="Damager" coveredlines="7" coverablelines="7" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="DeathScript" coveredlines="10" coverablelines="10" totallines="26" coveredbranches="0" totalbranches="0" />
+    <class name="Destroyer" coveredlines="0" coverablelines="6" totallines="14" coveredbranches="0" totalbranches="0" />
+    <class name="DestroyOnExit" coveredlines="0" coverablelines="3" totallines="11" coveredbranches="0" totalbranches="0" />
+    <class name="Door" coveredlines="0" coverablelines="10" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="EmptyRoom" coveredlines="0" coverablelines="3" totallines="11" coveredbranches="0" totalbranches="0" />
+    <class name="EnemyBullet" coveredlines="6" coverablelines="12" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="EnemyController" coveredlines="0" coverablelines="12" totallines="30" coveredbranches="0" totalbranches="0" />
+    <class name="FollowMovement" coveredlines="0" coverablelines="1" totallines="14" coveredbranches="0" totalbranches="0" />
+    <class name="FollowMovementObj" coveredlines="21" coverablelines="21" totallines="49" coveredbranches="0" totalbranches="0" />
+    <class name="HealthBar" coveredlines="0" coverablelines="10" totallines="26" coveredbranches="0" totalbranches="0" />
+    <class name="LevelGenerator" coveredlines="58" coverablelines="167" totallines="312" coveredbranches="0" totalbranches="0" />
+    <class name="LoopMovement" coveredlines="0" coverablelines="2" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="LoopMovementObj" coveredlines="15" coverablelines="15" totallines="36" coveredbranches="0" totalbranches="0" />
+    <class name="MainCameraController" coveredlines="0" coverablelines="9" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="MainCharacterController" coveredlines="67" coverablelines="79" totallines="129" coveredbranches="0" totalbranches="0" />
+    <class name="ModifyHealth" coveredlines="0" coverablelines="12" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="ModifySpeed" coveredlines="0" coverablelines="13" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerCombat" coveredlines="10" coverablelines="30" totallines="52" coveredbranches="0" totalbranches="0" />
+    <class name="RandomMovement" coveredlines="0" coverablelines="2" totallines="18" coveredbranches="0" totalbranches="0" />
+    <class name="RandomMovementObj" coveredlines="11" coverablelines="15" totallines="36" coveredbranches="0" totalbranches="0" />
+    <class name="ShootDirectionsFactory" coveredlines="2" coverablelines="2" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="ShootDirectionsObject" coveredlines="23" coverablelines="26" totallines="43" coveredbranches="0" totalbranches="0" />
+    <class name="ShootPlayerFactory" coveredlines="1" coverablelines="1" totallines="16" coveredbranches="0" totalbranches="0" />
+    <class name="ShootPlayerObject" coveredlines="20" coverablelines="23" totallines="39" coveredbranches="0" totalbranches="0" />
+    <class name="StartMenu" coveredlines="4" coverablelines="33" totallines="57" coveredbranches="0" totalbranches="0" />
+    <class name="StatDisplay" coveredlines="0" coverablelines="6" totallines="21" coveredbranches="0" totalbranches="0" />
+    <class name="StatIncreaseMenu" coveredlines="8" coverablelines="8" totallines="19" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Assembly-CSharp">
+    <class name="ObjectModifyHealthPlus" coveredlines="0" coverablelines="4" totallines="18" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="PlayTests">
+    <class name="Tests.BulletTests" coveredlines="33" coverablelines="33" totallines="71" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.DamagerTest" coveredlines="58" coverablelines="58" totallines="99" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.DeathPlayerAnimTest" coveredlines="33" coverablelines="33" totallines="65" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.PlayMovementTest" coveredlines="66" coverablelines="66" totallines="122" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.ShooterDirectionsObjectsTests" coveredlines="61" coverablelines="61" totallines="106" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.ShooterPlayerObjectsTests" coveredlines="73" coverablelines="73" totallines="124" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="TestEdit">
+    <class name="Tests.DamagableTest" coveredlines="40" coverablelines="40" totallines="67" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.FollowMovementTest" coveredlines="44" coverablelines="44" totallines="81" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.LevelGenTest" coveredlines="108" coverablelines="108" totallines="169" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.LooperMovementTest" coveredlines="15" coverablelines="15" totallines="37" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.PlayerMovementTest" coveredlines="25" coverablelines="25" totallines="62" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.RandomMovementTest" coveredlines="59" coverablelines="59" totallines="115" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.ShooterFactoryTests" coveredlines="20" coverablelines="20" totallines="45" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.StatIncreaseTest" coveredlines="13" coverablelines="13" totallines="32" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>
