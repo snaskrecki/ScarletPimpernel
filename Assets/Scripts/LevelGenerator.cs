@@ -98,7 +98,6 @@ public class LevelGenerator : MonoBehaviour
     {
         int index = UnityEngine.Random.Range(0, enemys_templates.allEnemys.Length);
         Vector3 new_pos = newRandomPosition(zero_position);
-        Debug.Log(new_pos);
         UnityEngine.GameObject new_enemy = Instantiate(enemys_templates.allEnemys[index], zero_position, Quaternion.identity);
         new_enemy.GetComponent<Damagable>().UpdateMaxHealth(UnityEngine.Random.Range(MAX_ENEMY_HEALTH / 2, MAX_ENEMY_HEALTH));
         enemysList.Add(new_enemy);
@@ -109,14 +108,15 @@ public class LevelGenerator : MonoBehaviour
         int index = UnityEngine.Random.Range(0, objects_templates.allObjects.Length);
 
         Vector3 new_pos =  newRandomPosition(zero_position);
-        Debug.Log("Object");
-        Debug.Log(new_pos);
         UnityEngine.GameObject new_object = Instantiate(objects_templates.allObjects[index], zero_position, Quaternion.identity);
         objectsList.Add(new_object);
     }
 
     void Generate()
     {
+		// Play new level sound
+		FindObjectOfType<AudioManager>().Play("NewLevel");
+
         map_grid = GenerateGraph();
         player.transform.position = new Vector3(0, 0, 0);
 

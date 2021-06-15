@@ -13,6 +13,13 @@ public class PlayerCombat : MonoBehaviour
     public float nextAttackTime = 0f;
     public Animator animator;
 
+	AudioManager audioManager;
+	
+	void Start()
+	{
+		audioManager = FindObjectOfType<AudioManager>();
+	}
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +35,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Attack()
     {
+		audioManager.Play("SwordSwing");
         animator.SetTrigger("Attack");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
