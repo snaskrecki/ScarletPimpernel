@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -6246776476588574085}
   m_Layer: 9
   m_Name: PotworekLoop
-  m_TagString: Untagged
+  m_TagString: EnemyLoop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1690417743
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 4723107735738678597, guid: 6fc66c021eec74942b4e71a3fde4dc04,
     type: 3}
@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   animator: {fileID: -6246776476588574085}
+  healthBar: {fileID: 0}
 --- !u!95 &-6246776476588574085
 Animator:
   serializedVersion: 3

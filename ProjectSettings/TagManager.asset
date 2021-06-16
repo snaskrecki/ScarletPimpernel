@@ -10,6 +10,10 @@ TagManager:
   - Door
   - Objects
   - StatIncreaseMenu
+  - EnemyFollow
+  - EnemyLoop
+  - EnemyRandom
+  - History
   layers:
   - Default
   - TransparentFX
@@ -64,4 +68,7 @@ TagManager:
     locked: 0
   - name: Bullets
     uniqueID: 3517429551
+    locked: 0
+  - name: UI
+    uniqueID: 2192638563
     locked: 0

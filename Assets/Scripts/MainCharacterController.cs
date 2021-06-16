@@ -116,6 +116,8 @@ public class MainCharacterController : MonoBehaviour
 
     public void Die()
     {
+        Debug.Log("Player Died");
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         isDead = true;
         rigidBody.simulated = false;
     }
