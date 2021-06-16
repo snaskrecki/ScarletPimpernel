@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4048538211295433682}
   - component: {fileID: 153607594}
   - component: {fileID: 3008080520040949071}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: PotworekRandom
   m_TagString: EnemyRandom
   m_Icon: {fileID: 0}
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1690417743
-  m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 4723107735738678597, guid: 6fc66c021eec74942b4e71a3fde4dc04,
     type: 3}
   m_Color: {r: 0.7155283, g: 0.9811321, b: 0.64328945, a: 1}

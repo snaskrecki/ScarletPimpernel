@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6390443992489290763}
   - component: {fileID: 6757372215966362072}
   - component: {fileID: 5725464504700374079}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: SpeedPlus
   m_TagString: Objects
   m_Icon: {fileID: 0}
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1343656353
-  m_SortingLayer: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92a2850dfa222ea4eab0d1b4e1ac5934, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

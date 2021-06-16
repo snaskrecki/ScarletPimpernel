@@ -24,7 +24,6 @@ namespace Tests
 
             Assert.IsNotEmpty(GameObject.FindGameObjectsWithTag("Door"));
             Assert.IsNotEmpty(GameObject.FindGameObjectsWithTag("Player"));
-            Assert.IsNotEmpty(GameObject.FindGameObjectsWithTag("Enemy"));
             Assert.IsNotEmpty(GameObject.FindGameObjectsWithTag("Room"));
         }
         

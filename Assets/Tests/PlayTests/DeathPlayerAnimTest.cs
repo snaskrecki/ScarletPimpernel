@@ -28,18 +28,6 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator PlayerDiesWith0HP()
-        {
-            Damagable dam = playerObject.GetComponent<Damagable>();
-            dam.maxHealth = 5;
-            dam.ResetHealth();
-            dam.ChangeHealth(-10);
-            yield return new WaitForSeconds(EstAnimTime);
-            Assert.True(playerObject == null);
-
-        }
-
-        [UnityTest]
         public IEnumerator PlayerDoesntDieWithPositiveHP()
         {
             Damagable dam = playerObject.GetComponent<Damagable>();

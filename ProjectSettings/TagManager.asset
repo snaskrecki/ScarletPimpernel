@@ -10,66 +10,52 @@ TagManager:
   - Door
   - Objects
   - StatIncreaseMenu
-  - EnemyFollow
+  - Room
+  - Enemy
+  - History
   - EnemyLoop
   - EnemyRandom
-  - History
-  - Room
+  - EnemyFollow
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
+  - 
   - Water
   - UI
-  -
-  -
-  - Player
+  - 
+  - 
   - Enemy
-  - EnemyBullet
-  - Object
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - Player
+  - Bullet
+  - PlayerAttack
+  - Items
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
+  - name: Rooms
+    uniqueID: 2862227925
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Floor
-    uniqueID: 2230650965
-    locked: 0
-  - name: Units
-    uniqueID: 3094687163
-    locked: 0
-  - name: Object
-    uniqueID: 2951310943
-    locked: 0
-  - name: Player
-    uniqueID: 24524831
-    locked: 0
-  - name: Enemy
-    uniqueID: 1690417743
-    locked: 0
-  - name: Bullets
-    uniqueID: 3517429551
-    locked: 0
-  - name: UI
-    uniqueID: 2192638563
+  - name: HistoryPanel
+    uniqueID: 635187247
     locked: 0

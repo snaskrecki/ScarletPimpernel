@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4176310482583683226}
   - component: {fileID: 712976054}
   - component: {fileID: 855581477857029613}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: PotworekFollow
   m_TagString: EnemyFollow
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1690417743
-  m_SortingLayer: 5
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4723107735738678597, guid: 6fc66c021eec74942b4e71a3fde4dc04,
     type: 3}
