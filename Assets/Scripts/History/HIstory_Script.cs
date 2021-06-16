@@ -11,7 +11,8 @@ public class History_Script : MonoBehaviour
 
     public static void OpenScene_prepare()
     {
-      // no preparations currently needed
+      LevelGenerator.DEFAULT_NUMBER_OF_ENEMYS = 0;
+      LevelGenerator.DEFAULT_NUMBER_OF_OBJECTS = 0;
     }
 
     public static void OnlyLoop_prepare()
@@ -49,7 +50,8 @@ public class History_Script : MonoBehaviour
 
     public static void OpenScene_clean()
     {
-      // no cleaning needed
+      LevelGenerator.DEFAULT_NUMBER_OF_ENEMYS = 3;
+      LevelGenerator.DEFAULT_NUMBER_OF_OBJECTS = 4;
     }
 
     public static void OnlyLoop_clean()

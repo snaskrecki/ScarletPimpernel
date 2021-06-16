@@ -16,8 +16,8 @@ public class LevelGenerator : MonoBehaviour
     private static int[,] map_grid;
     private const int DEFAULT_NUMBER_OF_ROOMS = 8;
     private const int DEFAULT_GRID_SIZE = 13;
-    public static int DEFAULT_NUMBER_OF_ENEMYS = 3;
-    public static int DEFAULT_NUMBER_OF_OBJECTS = 4;
+    public static int DEFAULT_NUMBER_OF_ENEMYS = 0;
+    public static int DEFAULT_NUMBER_OF_OBJECTS = 0;
     private int MAX_ENEMY_HEALTH = 2;
     private int UPGRADE_LEVEL = 5; // some statistics are not updated during each generation
     private int level_number;
@@ -36,6 +36,7 @@ public class LevelGenerator : MonoBehaviour
 
     private GameObject door;
     private GameObject player;
+    private GameObject current_scene;
     private StatIncreaseMenu statIncreaseMenu;
 
     void FindObjects()
@@ -60,17 +61,6 @@ public class LevelGenerator : MonoBehaviour
         objectsList = new ArrayList();
         enemysList = new ArrayList();
 
-        UnityEngine.GameObject current_scene = Instantiate(history_templates.allHistory[history_scene], middlePoint, Quaternion.identity);
-        Time.timeScale = 0f;
-        Thread.Sleep(2000);
-        Time.timeScale = 1f;
-        current_scene_name = current_scene.GetComponent<HistoryDetails>().scene_name;
-        Debug.Log(current_scene_name);
-        History_Script.prepare(current_scene_name);
-        Destroy(current_scene);
-        history_scene++;
-        Time.timeScale = 0f;
-
         Generate();
     }
 
@@ -93,42 +83,48 @@ public class LevelGenerator : MonoBehaviour
       History_Script.clean_after(current_scene_name);
     }
 
+    bool history_show = false;
+
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(needGeneration);
         if (!needGeneration) return;
-
-        clean_game();
-
-        MAX_ENEMY_HEALTH += 1;
-
-        if (level_number % UPGRADE_LEVEL == 0)
+        if (!history_show)
         {
-            DEFAULT_NUMBER_OF_ENEMYS += 2;
-            DEFAULT_NUMBER_OF_OBJECTS += 2;
-            player.GetComponent<PlayerCombat>().attackDamage++;
+          Debug.Log("Tutaj");
+          clean_game();
+
+          MAX_ENEMY_HEALTH += 1;
+
+          if (level_number % UPGRADE_LEVEL == 0)
+          {
+              DEFAULT_NUMBER_OF_ENEMYS += 2;
+              DEFAULT_NUMBER_OF_OBJECTS += 2;
+              player.GetComponent<PlayerCombat>().attackDamage++;
+          }
+          Debug.Log("tworzę nową");
+          current_scene = Instantiate(history_templates.allHistory[history_scene], middlePoint, Quaternion.identity);
+
+          Time.timeScale = 0f;
+          history_show = true;
+
+          current_scene_name = current_scene.GetComponent<HistoryDetails>().scene_name;
+          History_Script.prepare(current_scene_name);
         }
+        if (history_show && Input.GetKeyDown(KeyCode.Space)){
+          Destroy(current_scene);
+          Time.timeScale = 1f;
+          history_scene++;
 
-        statIncreaseMenu.Pause();
-        UnityEngine.GameObject current_scene = Instantiate(history_templates.allHistory[history_scene], middlePoint, Quaternion.identity);
-
-        Time.timeScale = 0f;
-        Thread.Sleep(3000);
-        Time.timeScale = 1f;
-
-        history_scene++;
-        current_scene_name = current_scene.GetComponent<HistoryDetails>().scene_name;
-        History_Script.prepare(current_scene_name);
-
-        Destroy(current_scene);
-
-        if (history_scene == history_templates.allHistory.Length)
-        {
-          SceneManager.LoadScene("GameOver");
+          if (history_scene == history_templates.allHistory.Length)
+          {
+            SceneManager.LoadScene("GameOver");
+          }
+          statIncreaseMenu.Pause();
+          Generate();
+          needGeneration = false;
         }
-
-        Generate();
-        needGeneration = false;
     }
 
     private Vector3 newRandomPosition(Vector3 zero_position)
@@ -143,7 +139,6 @@ public class LevelGenerator : MonoBehaviour
     {
         int index = UnityEngine.Random.Range(0, enemyList_length);
         Vector3 new_pos = newRandomPosition(zero_position);
-        Debug.Log(new_pos);
         UnityEngine.GameObject new_enemy = Instantiate(enemys_templates.allEnemys[index], zero_position, Quaternion.identity);
         new_enemy.GetComponent<Damagable>().UpdateMaxHealth(UnityEngine.Random.Range(MAX_ENEMY_HEALTH / 2, MAX_ENEMY_HEALTH));
         enemysList.Add(new_enemy);
@@ -154,8 +149,6 @@ public class LevelGenerator : MonoBehaviour
         int index = UnityEngine.Random.Range(0, objects_templates.allObjects.Length);
 
         Vector3 new_pos =  newRandomPosition(zero_position);
-        Debug.Log("Object");
-        Debug.Log(new_pos);
         UnityEngine.GameObject new_object = Instantiate(objects_templates.allObjects[index], zero_position, Quaternion.identity);
         objectsList.Add(new_object);
     }
