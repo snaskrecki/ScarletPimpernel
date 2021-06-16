@@ -2,13 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class LevelGenerator : MonoBehaviour
 {
+    public static string current_scene_name;
     public static bool needGeneration;
     private static RoomTemplates templates;
     private static EnemysTemplates enemys_templates;
     private static ObjectTemplates objects_templates;
+    private static HistoryTemplates history_templates;
     private static int[,] map_grid;
     private const int DEFAULT_NUMBER_OF_ROOMS = 8;
     private const int DEFAULT_GRID_SIZE = 13;
@@ -17,6 +21,7 @@ public class LevelGenerator : MonoBehaviour
     private int MAX_ENEMY_HEALTH = 2;
     private int UPGRADE_LEVEL = 5; // some statistics are not updated during each generation
     private int level_number;
+    private int history_scene = 0;
     public static int enemyList_length;
 
     private const float WIDTH = 19.2F;
@@ -24,9 +29,11 @@ public class LevelGenerator : MonoBehaviour
     private const int DOOR_ROOM = 1 << 6;
 
     private static Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
+    private static Vector3 middlePoint = new Vector3(0, 0, 0);
 
     private ArrayList objectsList;
     private ArrayList enemysList;
+
     private GameObject door;
     private GameObject player;
     private StatIncreaseMenu statIncreaseMenu;
@@ -37,6 +44,7 @@ public class LevelGenerator : MonoBehaviour
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         enemys_templates = GameObject.FindGameObjectWithTag("Enemys").GetComponent<EnemysTemplates>();
         objects_templates = GameObject.FindGameObjectWithTag("Objects").GetComponent<ObjectTemplates>();
+        history_templates = GameObject.FindGameObjectWithTag("History").GetComponent<HistoryTemplates>();
         door = GameObject.FindGameObjectWithTag("Door");
         statIncreaseMenu = GameObject.FindGameObjectWithTag("StatIncreaseMenu").GetComponent<StatIncreaseMenu>();
         enemyList_length = enemys_templates.allEnemys.Length;
@@ -52,7 +60,37 @@ public class LevelGenerator : MonoBehaviour
         objectsList = new ArrayList();
         enemysList = new ArrayList();
 
+        UnityEngine.GameObject current_scene = Instantiate(history_templates.allHistory[history_scene], middlePoint, Quaternion.identity);
+        Time.timeScale = 0f;
+        Thread.Sleep(2000);
+        Time.timeScale = 1f;
+        current_scene_name = current_scene.GetComponent<HistoryDetails>().scene_name;
+        Debug.Log(current_scene_name);
+        History_Script.prepare(current_scene_name);
+        Destroy(current_scene);
+        history_scene++;
+        Time.timeScale = 0f;
+
         Generate();
+    }
+
+    void clean_game()
+    {
+      foreach (UnityEngine.Object obj in enemysList)
+      {
+          Destroy(obj);
+      }
+
+      enemysList.Clear();
+
+      foreach (UnityEngine.Object obj in objectsList)
+      {
+          Destroy(obj);
+      }
+
+      objectsList.Clear();
+
+      History_Script.clean_after(current_scene_name);
     }
 
     // Update is called once per frame
@@ -60,20 +98,7 @@ public class LevelGenerator : MonoBehaviour
     {
         if (!needGeneration) return;
 
-        //cleaning
-        foreach (UnityEngine.Object obj in enemysList)
-        {
-            Destroy(obj);
-        }
-
-        enemysList.Clear();
-
-        foreach (UnityEngine.Object obj in objectsList)
-        {
-            Destroy(obj);
-        }
-
-        objectsList.Clear();
+        clean_game();
 
         MAX_ENEMY_HEALTH += 1;
 
@@ -85,6 +110,23 @@ public class LevelGenerator : MonoBehaviour
         }
 
         statIncreaseMenu.Pause();
+        UnityEngine.GameObject current_scene = Instantiate(history_templates.allHistory[history_scene], middlePoint, Quaternion.identity);
+
+        Time.timeScale = 0f;
+        Thread.Sleep(3000);
+        Time.timeScale = 1f;
+
+        history_scene++;
+        current_scene_name = current_scene.GetComponent<HistoryDetails>().scene_name;
+        History_Script.prepare(current_scene_name);
+
+        Destroy(current_scene);
+
+        if (history_scene == history_templates.allHistory.Length)
+        {
+          SceneManager.LoadScene("GameOver");
+        }
+
         Generate();
         needGeneration = false;
     }
