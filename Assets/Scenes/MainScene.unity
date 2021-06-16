@@ -1830,23 +1830,23 @@ MonoBehaviour:
   sounds:
   - name: NewLevel
     clip: {fileID: 8300000, guid: 860a3620e5ababd4fb23c12cf4859bce, type: 3}
-    volume: 0
+    volume: 1
     source: {fileID: 0}
   - name: Steps
     clip: {fileID: 8300000, guid: 162195f7b646cb94eaf3e6105fbcdbcc, type: 3}
-    volume: 0
+    volume: 1
     source: {fileID: 0}
   - name: PlayerHurt
     clip: {fileID: 8300000, guid: ee0d7a10096aedf4a807e77d9f43a0e7, type: 3}
-    volume: 0
+    volume: 1
     source: {fileID: 0}
   - name: SwordSwing
     clip: {fileID: 8300000, guid: fe76fa96a9f62374e8d22c4173b565f4, type: 3}
-    volume: 0
+    volume: 1
     source: {fileID: 0}
   - name: EnemyHurt
     clip: {fileID: 8300000, guid: ee008f8a6df3cb146aad16f23aaa7cb7, type: 3}
-    volume: 0
+    volume: 1
     source: {fileID: 0}
 --- !u!4 &1854089320
 Transform:
