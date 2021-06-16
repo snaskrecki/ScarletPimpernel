@@ -50,7 +50,7 @@ public class History_Script : MonoBehaviour
 
     public static void OpenScene_clean()
     {
-      LevelGenerator.DEFAULT_NUMBER_OF_ENEMYS = 3;
+      LevelGenerator.DEFAULT_NUMBER_OF_ENEMYS = 4;
       LevelGenerator.DEFAULT_NUMBER_OF_OBJECTS = 4;
     }
 
@@ -61,7 +61,6 @@ public class History_Script : MonoBehaviour
 
     public static void NoModifiacations_clean()
     {
-      // no cleaning needed
     }
 
     public static void FollowSpeeded_clean()

@@ -14,13 +14,13 @@ public class LevelGenerator : MonoBehaviour
     private static ObjectTemplates objects_templates;
     private static HistoryTemplates history_templates;
     private static int[,] map_grid;
-    private const int DEFAULT_NUMBER_OF_ROOMS = 8;
+    private const int DEFAULT_NUMBER_OF_ROOMS = 10;
     private const int DEFAULT_GRID_SIZE = 13;
     public static int DEFAULT_NUMBER_OF_ENEMYS = 0;
     public static int DEFAULT_NUMBER_OF_OBJECTS = 0;
     private int MAX_ENEMY_HEALTH = 2;
     private int UPGRADE_LEVEL = 5; // some statistics are not updated during each generation
-    private int level_number;
+    private int level_number = 0;
     private int history_scene = 0;
     public static int enemyList_length;
 
@@ -30,6 +30,7 @@ public class LevelGenerator : MonoBehaviour
 
     private static Vector3 bottomLeftCorner = new Vector3(-WIDTH * (DEFAULT_GRID_SIZE / 2), -HEIGHT * (DEFAULT_GRID_SIZE / 2), 0);
     private static Vector3 middlePoint = new Vector3(0, 0, 0);
+    private static Vector3 door_position;
 
     private ArrayList objectsList;
     private ArrayList enemysList;
@@ -54,10 +55,11 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         FindObjects();
 
         needGeneration = false;
+        history_show = false;
+        level_number = 0;
         objectsList = new ArrayList();
         enemysList = new ArrayList();
 
@@ -88,7 +90,8 @@ public class LevelGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(needGeneration);
+        Debug.Log("Generation" + needGeneration);
+        Debug.Log("History" + history_show);
         if (!needGeneration) return;
         if (!history_show)
         {
@@ -101,10 +104,10 @@ public class LevelGenerator : MonoBehaviour
           {
               DEFAULT_NUMBER_OF_ENEMYS += 2;
               DEFAULT_NUMBER_OF_OBJECTS += 2;
-              player.GetComponent<PlayerCombat>().attackDamage++;
           }
           Debug.Log("tworzę nową");
-          current_scene = Instantiate(history_templates.allHistory[history_scene], middlePoint, Quaternion.identity);
+          current_scene = Instantiate(history_templates.allHistory[history_scene],
+            player.transform.position, Quaternion.identity);
 
           Time.timeScale = 0f;
           history_show = true;
@@ -116,6 +119,7 @@ public class LevelGenerator : MonoBehaviour
           Destroy(current_scene);
           Time.timeScale = 1f;
           history_scene++;
+          history_show = false;
 
           if (history_scene == history_templates.allHistory.Length)
           {
@@ -155,6 +159,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Generate()
     {
+        int numberOfRooms = UnityEngine.Random.Range(DEFAULT_NUMBER_OF_ROOMS/2, DEFAULT_NUMBER_OF_ROOMS);
         map_grid = GenerateGraph();
         player.transform.position = new Vector3(0, 0, 0);
 
@@ -173,8 +178,8 @@ public class LevelGenerator : MonoBehaviour
         if (room == 0) return;
 
         int type = room - ROOM - 1;
-        int current_number_of_enemys = UnityEngine.Random.Range(1, DEFAULT_NUMBER_OF_ENEMYS);
-        int current_number_of_objects = UnityEngine.Random.Range(1, DEFAULT_NUMBER_OF_OBJECTS);
+        int current_number_of_enemys = UnityEngine.Random.Range(0, DEFAULT_NUMBER_OF_ENEMYS);
+        int current_number_of_objects = UnityEngine.Random.Range(0, DEFAULT_NUMBER_OF_OBJECTS);
 
         var pos = new Vector3(bottomLeftCorner.x + x * WIDTH, bottomLeftCorner.y + y * HEIGHT, 0);
 
@@ -258,7 +263,6 @@ public class LevelGenerator : MonoBehaviour
         int[,] grid = new int[grid_size, grid_size];
         Tuple<int, int>[] freeNeighbour = new Tuple<int, int>[grid_size * grid_size * 4];
         int freeNSize = 0;
-
         //first room
         grid[grid_size / 2, grid_size / 2] = ROOM;
         numberOfRooms--;
@@ -346,5 +350,6 @@ public class LevelGenerator : MonoBehaviour
     private void SpawnDoor(Vector3 position)
     {
         door.transform.position = position;
+        door_position = position;
     }
 }
