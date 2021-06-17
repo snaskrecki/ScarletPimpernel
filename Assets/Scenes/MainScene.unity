@@ -1798,99 +1798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueText: {fileID: 583458996}
---- !u!1 &1854089318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1854089320}
-  - component: {fileID: 1854089319}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1854089319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854089318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a11bfec3759d6646bc9831b983a2248, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: NewLevel
-    clip: {fileID: 8300000, guid: 860a3620e5ababd4fb23c12cf4859bce, type: 3}
-    volume: 1
-    source: {fileID: 0}
-  - name: PlayerDeath
-    clip: {fileID: 8300000, guid: ac73a4aa04e0fa04fab7f443b512712f, type: 3}
-    volume: 1
-    source: {fileID: 0}
-  - name: PlayerHurt
-    clip: {fileID: 8300000, guid: ee0d7a10096aedf4a807e77d9f43a0e7, type: 3}
-    volume: 1
-    source: {fileID: 0}
-  - name: SwordSwing
-    clip: {fileID: 8300000, guid: fe76fa96a9f62374e8d22c4173b565f4, type: 3}
-    volume: 1
-    source: {fileID: 0}
-  - name: EnemyHurt
-    clip: {fileID: 8300000, guid: ee008f8a6df3cb146aad16f23aaa7cb7, type: 3}
-    volume: 1
-    source: {fileID: 0}
-  - name: EnemyDeath
-    clip: {fileID: 8300000, guid: 22503aecac23fee4babdacbd472089f8, type: 3}
-    volume: 1
-    source: {fileID: 0}
-  background_music:
-  - name: Moonlight Hall
-    clip: {fileID: 8300000, guid: 7a7924579b8a29c449bd1f068be99144, type: 3}
-    volume: 0.1
-    source: {fileID: 0}
-  - name: Ancient Rite
-    clip: {fileID: 8300000, guid: 7d3e35bc37399704d8cc5dfb7a98f776, type: 3}
-    volume: 0.1
-    source: {fileID: 0}
-  - name: The Descent
-    clip: {fileID: 8300000, guid: 7a05f5558625b2641b34bdb27533a271, type: 3}
-    volume: 0.1
-    source: {fileID: 0}
-  - name: Darkest Child
-    clip: {fileID: 8300000, guid: e485b2e36f416ce4ea46f9e65bc34f28, type: 3}
-    volume: 0.1
-    source: {fileID: 0}
-  - name: Circus of Freaks
-    clip: {fileID: 8300000, guid: 19380d678e6f41945985803650a0356c, type: 3}
-    volume: 0.1
-    source: {fileID: 0}
-  - name: Ancient Mystery Waltz
-    clip: {fileID: 8300000, guid: 671f81090d64a004198faa86addca751, type: 3}
-    volume: 0.1
-    source: {fileID: 0}
---- !u!4 &1854089320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854089318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1911262308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2318,6 +2225,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2595af6fe12fe664ba669dccf30571e4, type: 3}
+--- !u!1001 &2957627173135381824
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2957627171482754342, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957627171482754344, guid: cd8c418f1b850514cb81c482949b9d65,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd8c418f1b850514cb81c482949b9d65, type: 3}
 --- !u!1001 &3720054486257161011
 PrefabInstance:
   m_ObjectHideFlags: 0
