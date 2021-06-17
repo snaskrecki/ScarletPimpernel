@@ -7,6 +7,12 @@ public class StartMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenu;
+	AudioManager audioManager;
+
+	void Start()
+	{
+		audioManager = FindObjectOfType<AudioManager>();
+	}
 
     void Update()
     {
@@ -46,6 +52,7 @@ public class StartMenu : MonoBehaviour
     public void mainMenuButton()
     {
         SceneManager.LoadScene("StartMenu");
+		audioManager.StopMusic();
     }
 
     public void resumeButton()

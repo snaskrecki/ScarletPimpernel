@@ -59,5 +59,6 @@ public class AudioManager : MonoBehaviour
 	{
 		Debug.Log("Stopping music");
 		background_music[current_music_id].source.Stop();
+		current_music_id = -1;
 	}
 }
