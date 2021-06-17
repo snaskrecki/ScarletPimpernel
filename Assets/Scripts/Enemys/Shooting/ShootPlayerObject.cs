@@ -10,6 +10,7 @@ public class ShootPlayerObject : EnemyShootingObject
     Transform me, target;
     float bulletSpeed;
     Animator animator;
+	AudioManager audioManager;
 
     public ShootPlayerObject(GameObject bulletPrefab, float cooldown, Transform me, Transform target, float bulletSpeed, Animator animator)
     {
@@ -20,6 +21,7 @@ public class ShootPlayerObject : EnemyShootingObject
         this.timePassed = 0;
         this.bulletSpeed = bulletSpeed;
         this.animator = animator;
+		this.audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     public void ShootDecision(float deltaTime)

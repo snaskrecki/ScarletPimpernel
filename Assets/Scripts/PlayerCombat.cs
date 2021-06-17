@@ -42,8 +42,19 @@ public class PlayerCombat : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-			audioManager.Play("EnemyHurt");			
-            enemy.GetComponent<Damagable>().ChangeHealth(-attackDamage);
+			if(enemy.GetComponent<Damagable>().GetHealth() - attackDamage <= 0)
+			{
+				if(!enemy.GetComponent<Damagable>().IsDead())
+				{
+					audioManager.Play("EnemyDeath");	            	
+				}
+			}
+			else
+			{
+				audioManager.Play("EnemyHurt");
+			}
+			
+			enemy.GetComponent<Damagable>().ChangeHealth(-attackDamage);
         }
     }
 

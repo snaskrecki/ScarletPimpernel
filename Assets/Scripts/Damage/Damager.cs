@@ -17,14 +17,33 @@ public class Damager : MonoBehaviour
         var damagable = collision.gameObject.GetComponent<Damagable>();
         if (damagable != null)
         {
-			audioManager.Play("PlayerHurt");
-            damagable.ChangeHealth(-damage);
-			
-			if(damagable.GetHealth() <= 0)
+			if(damagable.GetHealth() - damage <= 0)
 			{
-				audioManager.StopMusic();
-				audioManager.Play("PlayerDeath");
+				StopMusic();
+				PlaySound("PlayerDeath");
 			}
+			else
+			{
+				PlaySound("PlayerHurt");
+			}
+			
+            damagable.ChangeHealth(-damage);
         }
     }
+	
+	private void PlaySound(string name)
+	{
+		if(audioManager != null)
+		{
+			audioManager.Play(name);
+		}
+	}
+	
+	private void StopMusic()
+	{
+		if(audioManager != null)
+		{
+			audioManager.StopMusic();
+		}
+	}
 }

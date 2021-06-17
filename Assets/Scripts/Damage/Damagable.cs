@@ -6,12 +6,14 @@ public class Damagable : MonoBehaviour
 {
     public int maxHealth;
     int health;
+	bool dead;
     public Animator animator;
     public HealthBar healthBar;
 
     private void Awake()
     {
         health = maxHealth;
+		dead = false;
     }
 
     void NotifyHealthBar()
@@ -31,6 +33,7 @@ public class Damagable : MonoBehaviour
         health = Mathf.Clamp(health + amount, 0, maxHealth);
         if (health <= 0)
         {
+			dead = true;
             StartCoroutine(Die());
         }
 
@@ -38,6 +41,8 @@ public class Damagable : MonoBehaviour
     }
 
     public int GetHealth() => health;
+	
+	public bool IsDead() => dead;
 
     public void ResetHealth()
     {
