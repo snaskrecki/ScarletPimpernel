@@ -42,6 +42,7 @@ public class PlayerCombat : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
+			audioManager.Play("EnemyHurt");			
             enemy.GetComponent<Damagable>().ChangeHealth(-attackDamage);
         }
     }

@@ -29,6 +29,7 @@ public class LevelGenerator : MonoBehaviour
     private GameObject door;
     private GameObject player;
     private StatIncreaseMenu statIncreaseMenu;
+	private AudioManager audioManager;
 
     void FindObjects()
     {
@@ -43,7 +44,7 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+		audioManager = FindObjectOfType<AudioManager>();
         FindObjects();
 
         needGeneration = false;
@@ -114,8 +115,10 @@ public class LevelGenerator : MonoBehaviour
 
     void Generate()
     {
-		// Play new level sound
-		FindObjectOfType<AudioManager>().Play("NewLevel");
+		// Play new level sound.
+		audioManager.Play("NewLevel");
+		// Start playing background music.
+		audioManager.PlayNextLevelBackgroundMusic();
 
         map_grid = GenerateGraph();
         player.transform.position = new Vector3(0, 0, 0);

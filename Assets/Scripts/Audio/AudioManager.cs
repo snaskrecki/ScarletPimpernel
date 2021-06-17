@@ -5,14 +5,28 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
 	public Sound[] sounds;
+	public Sound[] background_music;
+	int current_music_id;
 	
     void Awake()
     {
+		current_music_id = -1;
+		
+		// Initializing sound sources.
+		
         foreach(Sound s in sounds)
 		{
 			s.source = gameObject.AddComponent<AudioSource>();
 			s.source.clip = s.clip;
 			s.source.volume = s.volume;
+		}
+		
+		foreach(Sound s in background_music)
+		{
+			s.source = gameObject.AddComponent<AudioSource>();
+			s.source.clip = s.clip;
+			s.source.volume = s.volume;
+			s.source.loop = true;
 		}
     }
 
@@ -29,5 +43,16 @@ public class AudioManager : MonoBehaviour
 		
 		Debug.Log("Found " + s.name);
 		s.source.Play();
+	}
+	
+	public void PlayNextLevelBackgroundMusic()
+	{
+		if(current_music_id != -1)
+		{
+			background_music[current_music_id].source.Stop();
+		}
+		
+		current_music_id = (current_music_id + 1) % background_music.Length;
+		background_music[current_music_id].source.Play();
 	}
 }
