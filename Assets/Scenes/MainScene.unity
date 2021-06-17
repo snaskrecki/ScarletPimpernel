@@ -1855,23 +1855,23 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ancient Rite
     clip: {fileID: 8300000, guid: 7d3e35bc37399704d8cc5dfb7a98f776, type: 3}
-    volume: 0.3
+    volume: 0.2
     source: {fileID: 0}
   - name: The Descent
     clip: {fileID: 8300000, guid: 7a05f5558625b2641b34bdb27533a271, type: 3}
-    volume: 0.3
+    volume: 0.2
     source: {fileID: 0}
   - name: Darkest Child
     clip: {fileID: 8300000, guid: e485b2e36f416ce4ea46f9e65bc34f28, type: 3}
-    volume: 0.3
+    volume: 0.2
     source: {fileID: 0}
   - name: Circus of Freaks
     clip: {fileID: 8300000, guid: 19380d678e6f41945985803650a0356c, type: 3}
-    volume: 0.3
+    volume: 0.2
     source: {fileID: 0}
   - name: Ancient Mystery Waltz
     clip: {fileID: 8300000, guid: 671f81090d64a004198faa86addca751, type: 3}
-    volume: 0.3
+    volume: 0.2
     source: {fileID: 0}
 --- !u!4 &1854089320
 Transform:
