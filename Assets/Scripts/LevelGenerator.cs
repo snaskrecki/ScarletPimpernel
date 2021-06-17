@@ -39,6 +39,7 @@ public class LevelGenerator : MonoBehaviour
     private GameObject player;
     private GameObject current_scene;
     private StatIncreaseMenu statIncreaseMenu;
+	private AudioManager audioManager;
 
     void FindObjects()
     {
@@ -50,11 +51,13 @@ public class LevelGenerator : MonoBehaviour
         door = GameObject.FindGameObjectWithTag("Door");
         statIncreaseMenu = GameObject.FindGameObjectWithTag("StatIncreaseMenu").GetComponent<StatIncreaseMenu>();
         enemyList_length = enemys_templates.allEnemys.Length;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+
         FindObjects();
 
         needGeneration = false;
@@ -159,7 +162,15 @@ public class LevelGenerator : MonoBehaviour
 
     void Generate()
     {
+
         int numberOfRooms = UnityEngine.Random.Range(DEFAULT_NUMBER_OF_ROOMS/2, DEFAULT_NUMBER_OF_ROOMS);
+
+		// Play new level sound.
+		audioManager.Play("NewLevel");
+		// Start playing background music.
+		audioManager.PlayNextLevelBackgroundMusic();
+
+
         map_grid = GenerateGraph();
         player.transform.position = new Vector3(0, 0, 0);
 

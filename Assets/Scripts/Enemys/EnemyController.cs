@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     EnemyMovementObject moover;
     Rigidbody2D body;
     EnemyShootingObject shooter;
+	AudioManager audioManager;
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,6 +17,11 @@ public class EnemyController : MonoBehaviour
         shooter = GetComponent<EnemyShootingAI>().MakeShooter(player);
 
     }
+	
+	void Start()
+	{
+		audioManager = FindObjectOfType<AudioManager>();
+	}
 
     // Update is called once per frame
     void Update()

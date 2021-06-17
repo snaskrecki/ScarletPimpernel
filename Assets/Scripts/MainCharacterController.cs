@@ -35,7 +35,7 @@ public class MainCharacterController : MonoBehaviour
         anim = GetComponent<Animator>();
         if (controllerInput == null)
             controllerInput = new ControllerInput();
-    }
+	}
 
     // Update is called once per frame
 

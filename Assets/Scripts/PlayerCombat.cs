@@ -13,6 +13,13 @@ public class PlayerCombat : MonoBehaviour
     public float nextAttackTime = 0f;
     public Animator animator;
 
+	AudioManager audioManager;
+	
+	void Start()
+	{
+		audioManager = FindObjectOfType<AudioManager>();
+	}
+
     // Update is called once per frame
     void Update()
     {
@@ -28,13 +35,26 @@ public class PlayerCombat : MonoBehaviour
 
     void Attack()
     {
+		audioManager.Play("SwordSwing");
         animator.SetTrigger("Attack");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Damagable>().ChangeHealth(-attackDamage);
+			if(enemy.GetComponent<Damagable>().GetHealth() - attackDamage <= 0)
+			{
+				if(!enemy.GetComponent<Damagable>().IsDead())
+				{
+					audioManager.Play("EnemyDeath");	            	
+				}
+			}
+			else
+			{
+				audioManager.Play("EnemyHurt");
+			}
+			
+			enemy.GetComponent<Damagable>().ChangeHealth(-attackDamage);
         }
     }
 

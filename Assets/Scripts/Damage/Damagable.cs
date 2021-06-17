@@ -6,12 +6,14 @@ public class Damagable : MonoBehaviour
 {
     public int maxHealth;
     int health;
+	bool dead;
     public Animator animator;
     public HealthBar healthBar;
 
     private void Awake()
     {
         health = maxHealth;
+		dead = false;
     }
 
     void NotifyHealthBar()
@@ -32,12 +34,15 @@ public class Damagable : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            dead = true;
         }
 
         NotifyHealthBar();
     }
 
     public int GetHealth() => health;
+
+	public bool IsDead() => dead;
 
     public void ResetHealth()
     {
@@ -60,6 +65,6 @@ public class Damagable : MonoBehaviour
         } else {
             GameObject.Destroy(gameObject);
         }
-        
+
     }
 }
