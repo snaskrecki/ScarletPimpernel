@@ -41,7 +41,6 @@ public class AudioManager : MonoBehaviour
 			return;
 		}
 		
-		Debug.Log("Found " + s.name);
 		s.source.Play();
 	}
 	
@@ -54,5 +53,11 @@ public class AudioManager : MonoBehaviour
 		
 		current_music_id = (current_music_id + 1) % background_music.Length;
 		background_music[current_music_id].source.Play();
+	}
+	
+	public void StopMusic()
+	{
+		Debug.Log("Stopping music");
+		background_music[current_music_id].source.Stop();
 	}
 }

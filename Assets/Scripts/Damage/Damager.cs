@@ -19,6 +19,12 @@ public class Damager : MonoBehaviour
         {
 			audioManager.Play("PlayerHurt");
             damagable.ChangeHealth(-damage);
+			
+			if(damagable.GetHealth() <= 0)
+			{
+				audioManager.StopMusic();
+				audioManager.Play("PlayerDeath");
+			}
         }
     }
 }

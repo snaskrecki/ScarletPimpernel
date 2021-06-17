@@ -1832,8 +1832,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 860a3620e5ababd4fb23c12cf4859bce, type: 3}
     volume: 1
     source: {fileID: 0}
-  - name: Steps
-    clip: {fileID: 8300000, guid: 162195f7b646cb94eaf3e6105fbcdbcc, type: 3}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: ac73a4aa04e0fa04fab7f443b512712f, type: 3}
     volume: 1
     source: {fileID: 0}
   - name: PlayerHurt
